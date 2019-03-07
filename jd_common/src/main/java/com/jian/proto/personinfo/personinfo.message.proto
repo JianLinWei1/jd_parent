@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.ljzn.grpc.personinfo";
+option objc_class_prefix = "PERSONINFO";
+
+package JdSystem; 
+
+
+   
+//人员基本信息
+message  PersoninfoMessage{
+  string  cardId = 1; //工作证号(编号)
+  string name =2 ;  //姓名
+  repeated float photoFeature = 4 ; //特征(windows)
+  int64  photoFeatureLen = 5 ; //特征长度
+  bytes  photo = 6 ; //照片（可选)
+  int64  version = 7 ;
+  int32  action = 8 ; //操作 -1删除  1 增加 2 更新
+  
+}
+
+
