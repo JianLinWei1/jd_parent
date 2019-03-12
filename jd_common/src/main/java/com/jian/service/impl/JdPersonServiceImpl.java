@@ -5,6 +5,8 @@ import java.util.List;
 import javax.annotation.Resource;
 
 import org.apache.commons.lang3.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import com.alibaba.fastjson.JSON;
@@ -21,6 +23,7 @@ import com.jian.util.ResultUtil;
 
 @Service
 public class JdPersonServiceImpl  implements  JdPersonService {
+	Logger  logger = LoggerFactory.getLogger(JdPersonServiceImpl.class);
 	@Resource
 	JdPersonsMapper  ljPersonMapper;
 	@Resource
@@ -75,6 +78,7 @@ public class JdPersonServiceImpl  implements  JdPersonService {
 				break;
 			}catch(Exception e){
 				e.printStackTrace();
+				logger.error(e.getMessage(), e);
 				face_msg = "创建失败";
 				lp.setPhotoFeature(null);
 			   resultUtil.setData(JSON.toJSON(lp).toString());
@@ -145,6 +149,7 @@ public class JdPersonServiceImpl  implements  JdPersonService {
 				break;
 			}catch(Exception e){
 				e.printStackTrace();
+				logger.error(e.getMessage(), e);
 				face_msg = "更新失败";
 				lp.setPhotoFeature(null);
 			   resultUtil.setData(JSON.toJSON(lp).toString());
@@ -199,7 +204,7 @@ public class JdPersonServiceImpl  implements  JdPersonService {
 		Criteria criteria = example.createCriteria();
 		criteria.andVersionGreaterThan(version);
 		
-		List<JdPersons>    jdPersons  = ljPersonMapper.selectByExample(example);
+		List<JdPersons>    jdPersons  = ljPersonMapper.selectByExampleWithBLOBs(example);
 		if(jdPersons.size() > 10)
 			return jdPersons.subList(0, 10);
 		else
