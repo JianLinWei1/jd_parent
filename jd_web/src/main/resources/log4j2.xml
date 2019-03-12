@@ -11,6 +11,10 @@
 		</Console>
 		<File name="File" fileName="jlw_Springboot.log">
             <PatternLayout  pattern="${PATTERN}" />
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+                <SizeBasedTriggeringPolicy size="10MB"/>
+            </Policies>
         </File>
 	</appenders>
 	<!-- ALL < TRACE < DEBUG < INFO < WARN < ERROR < FATAL < OFF -->

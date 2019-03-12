@@ -36,4 +36,7 @@ public class PersonInfoController {
 		}
 		return new ResultUtil(-1, "请求错误");
 	}
+	
+	
+
 }
