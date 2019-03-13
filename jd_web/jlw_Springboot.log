@@ -3014,3 +3014,515 @@ Caused by: java.net.BindException: Address already in use: bind
 2019-03-12 16:47:40.809 |-INFO  [main] org.apache.tomcat.util.net.NioSelectorPool [173] -| Using a shared selector for servlet write/read
 2019-03-12 16:47:40.825 |-INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [204] -| Tomcat started on port(s): 8080 (http) with context path ''
 2019-03-12 16:47:40.830 |-INFO  [main] com.jian.Application [59] -| Started Application in 5.717 seconds (JVM running for 8.929)
+2019-03-12 17:01:32.296 |-INFO  [main] com.jian.Application [50] -| Starting Application on jianlinwei with PID 13752 (D:\new_workspace\jd_parent\jd_web\target\classes started by jianlinwei in D:\new_workspace\jd_parent\jd_web)
+2019-03-12 17:01:32.306 |-INFO  [main] com.jian.Application [675] -| No active profile set, falling back to default profiles: default
+2019-03-12 17:01:34.578 |-INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [90] -| Tomcat initialized with port(s): 8080 (http)
+2019-03-12 17:01:34.594 |-INFO  [main] org.apache.coyote.http11.Http11NioProtocol [173] -| Initializing ProtocolHandler ["http-nio-8080"]
+2019-03-12 17:01:34.605 |-INFO  [main] org.apache.catalina.core.StandardService [173] -| Starting service [Tomcat]
+2019-03-12 17:01:34.606 |-INFO  [main] org.apache.catalina.core.StandardEngine [173] -| Starting Servlet Engine: Apache Tomcat/9.0.12
+2019-03-12 17:01:34.619 |-INFO  [main] org.apache.catalina.core.AprLifecycleListener [173] -| The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_181\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_181/bin/server;C:/Program Files/Java/jre1.8.0_181/bin;C:/Program Files/Java/jre1.8.0_181/lib/amd64;C:\Program Files (x86)\NetSarang\Xshell 6\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk1.8.0_181\jre\bin;D:\Program Files (x86)\Inno Setup 5;C:\Windows\system32;C:\Windows;C:\Windows\system32\wbem;C:\Program Files\nodejs\;D:\Program Files\Microsoft VS Code\bin;D:\Program Files\Python\Scripts\;D:\Program Files\Python\;C:\Users\简二娃\AppData\Local\Programs\Python\Python37\Scripts\;C:\Users\简二娃\AppData\Local\Programs\Python\Python37\;C:\Program Files (x86)\Microsoft Visual Studio\Common\Tools\WinNT;C:\Program Files (x86)\Microsoft Visual Studio\Common\MSDev98\Bin;C:\Program Files (x86)\Microsoft Visual Studio\Common\Tools;C:\Program Files (x86)\Microsoft Visual Studio\VC98\bin;D:\new_workspace_c\emgucv-windesktop 3.3.0.2824\bin;C:\Users\简二娃\AppData\Roaming\npm;D:\Java工具\eclipse;;.]
+2019-03-12 17:01:34.848 |-INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [173] -| Initializing Spring embedded WebApplicationContext
+2019-03-12 17:01:34.849 |-INFO  [main] org.springframework.web.context.ContextLoader [285] -| Root WebApplicationContext: initialization completed in 2465 ms
+2019-03-12 17:01:34.927 |-INFO  [main] org.springframework.boot.web.servlet.ServletRegistrationBean [186] -| Servlet dispatcherServlet mapped to [/]
+2019-03-12 17:01:34.930 |-INFO  [main] org.springframework.boot.web.servlet.ServletRegistrationBean [186] -| Servlet statViewServlet mapped to [/druid/*]
+2019-03-12 17:01:34.938 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-03-12 17:01:34.939 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-03-12 17:01:34.940 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'formContentFilter' to: [/*]
+2019-03-12 17:01:34.941 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'requestContextFilter' to: [/*]
+2019-03-12 17:01:34.941 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [261] -| Mapping filter: 'webStatFilter' to urls: [/*]
+2019-03-12 17:01:35.102 |-INFO  [main] com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure [56] -| Init DruidDataSource
+2019-03-12 17:01:35.737 |-INFO  [main] com.alibaba.druid.pool.DruidDataSource [930] -| {dataSource-1} inited
+2019-03-12 17:01:36.450 |-INFO  [main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor [171] -| Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-12 17:01:37.015 |-INFO  [main] org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler [171] -| Initializing ExecutorService 'taskScheduler'
+2019-03-12 17:01:37.165 |-INFO  [main] net.devh.boot.grpc.server.serverfactory.AbstractGrpcServerFactory [114] -| Registered gRPC service: JdSystem.ClientAuthService, bean: clientServiceImpl, class: com.jian.grpc.ClientServiceImpl
+2019-03-12 17:01:37.174 |-INFO  [main] net.devh.boot.grpc.server.serverfactory.AbstractGrpcServerFactory [114] -| Registered gRPC service: JdSystem.PersonInfoAuthService, bean: personInfoServiceImpl, class: com.jian.grpc.PersonInfoServiceImpl
+2019-03-12 17:01:37.857 |-INFO  [main] net.devh.boot.grpc.server.serverfactory.GrpcServerLifecycle [91] -| gRPC Server started, listening on address: *, port: 50051
+2019-03-12 17:01:37.872 |-INFO  [main] org.apache.coyote.http11.Http11NioProtocol [173] -| Starting ProtocolHandler ["http-nio-8080"]
+2019-03-12 17:01:37.874 |-INFO  [main] org.apache.tomcat.util.net.NioSelectorPool [173] -| Using a shared selector for servlet write/read
+2019-03-12 17:01:37.891 |-INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [204] -| Tomcat started on port(s): 8080 (http) with context path ''
+2019-03-12 17:01:37.895 |-INFO  [main] com.jian.Application [59] -| Started Application in 6.182 seconds (JVM running for 9.528)
+2019-03-12 17:38:11.760 |-INFO  [main] com.jian.Application [50] -| Starting Application on jianlinwei with PID 12992 (D:\new_workspace\jd_parent\jd_web\target\classes started by jianlinwei in D:\new_workspace\jd_parent\jd_web)
+2019-03-12 17:38:11.771 |-INFO  [main] com.jian.Application [675] -| No active profile set, falling back to default profiles: default
+2019-03-12 17:38:13.960 |-INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [90] -| Tomcat initialized with port(s): 8080 (http)
+2019-03-12 17:38:13.981 |-INFO  [main] org.apache.coyote.http11.Http11NioProtocol [173] -| Initializing ProtocolHandler ["http-nio-8080"]
+2019-03-12 17:38:13.993 |-INFO  [main] org.apache.catalina.core.StandardService [173] -| Starting service [Tomcat]
+2019-03-12 17:38:13.995 |-INFO  [main] org.apache.catalina.core.StandardEngine [173] -| Starting Servlet Engine: Apache Tomcat/9.0.12
+2019-03-12 17:38:14.008 |-INFO  [main] org.apache.catalina.core.AprLifecycleListener [173] -| The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_181\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_181/bin/server;C:/Program Files/Java/jre1.8.0_181/bin;C:/Program Files/Java/jre1.8.0_181/lib/amd64;C:\Program Files (x86)\NetSarang\Xshell 6\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk1.8.0_181\jre\bin;D:\Program Files (x86)\Inno Setup 5;C:\Windows\system32;C:\Windows;C:\Windows\system32\wbem;C:\Program Files\nodejs\;D:\Program Files\Microsoft VS Code\bin;D:\Program Files\Python\Scripts\;D:\Program Files\Python\;C:\Users\简二娃\AppData\Local\Programs\Python\Python37\Scripts\;C:\Users\简二娃\AppData\Local\Programs\Python\Python37\;C:\Program Files (x86)\Microsoft Visual Studio\Common\Tools\WinNT;C:\Program Files (x86)\Microsoft Visual Studio\Common\MSDev98\Bin;C:\Program Files (x86)\Microsoft Visual Studio\Common\Tools;C:\Program Files (x86)\Microsoft Visual Studio\VC98\bin;D:\new_workspace_c\emgucv-windesktop 3.3.0.2824\bin;C:\Users\简二娃\AppData\Roaming\npm;D:\Java工具\eclipse;;.]
+2019-03-12 17:38:14.199 |-INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [173] -| Initializing Spring embedded WebApplicationContext
+2019-03-12 17:38:14.199 |-INFO  [main] org.springframework.web.context.ContextLoader [285] -| Root WebApplicationContext: initialization completed in 2352 ms
+2019-03-12 17:38:14.268 |-INFO  [main] org.springframework.boot.web.servlet.ServletRegistrationBean [186] -| Servlet dispatcherServlet mapped to [/]
+2019-03-12 17:38:14.271 |-INFO  [main] org.springframework.boot.web.servlet.ServletRegistrationBean [186] -| Servlet statViewServlet mapped to [/druid/*]
+2019-03-12 17:38:14.276 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-03-12 17:38:14.277 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-03-12 17:38:14.278 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'formContentFilter' to: [/*]
+2019-03-12 17:38:14.280 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'requestContextFilter' to: [/*]
+2019-03-12 17:38:14.282 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [261] -| Mapping filter: 'webStatFilter' to urls: [/*]
+2019-03-12 17:38:14.375 |-INFO  [main] com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure [56] -| Init DruidDataSource
+2019-03-12 17:38:14.853 |-INFO  [main] com.alibaba.druid.pool.DruidDataSource [930] -| {dataSource-1} inited
+2019-03-12 17:38:15.551 |-INFO  [main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor [171] -| Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-12 17:38:16.107 |-INFO  [main] org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler [171] -| Initializing ExecutorService 'taskScheduler'
+2019-03-12 17:38:16.238 |-INFO  [main] net.devh.boot.grpc.server.serverfactory.AbstractGrpcServerFactory [114] -| Registered gRPC service: JdSystem.ClientAuthService, bean: clientServiceImpl, class: com.jian.grpc.ClientServiceImpl
+2019-03-12 17:38:16.245 |-INFO  [main] net.devh.boot.grpc.server.serverfactory.AbstractGrpcServerFactory [114] -| Registered gRPC service: JdSystem.PersonInfoAuthService, bean: personInfoServiceImpl, class: com.jian.grpc.PersonInfoServiceImpl
+2019-03-12 17:38:16.865 |-INFO  [main] net.devh.boot.grpc.server.serverfactory.GrpcServerLifecycle [91] -| gRPC Server started, listening on address: *, port: 50051
+2019-03-12 17:38:16.881 |-INFO  [main] org.apache.coyote.http11.Http11NioProtocol [173] -| Starting ProtocolHandler ["http-nio-8080"]
+2019-03-12 17:38:16.883 |-INFO  [main] org.apache.tomcat.util.net.NioSelectorPool [173] -| Using a shared selector for servlet write/read
+2019-03-12 17:38:16.907 |-INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [204] -| Tomcat started on port(s): 8080 (http) with context path ''
+2019-03-12 17:38:16.912 |-INFO  [main] com.jian.Application [59] -| Started Application in 5.707 seconds (JVM running for 8.947)
+2019-03-12 17:42:48.069 |-INFO  [main] com.jian.Application [50] -| Starting Application on jianlinwei with PID 11560 (D:\new_workspace\jd_parent\jd_web\target\classes started by jianlinwei in D:\new_workspace\jd_parent\jd_web)
+2019-03-12 17:42:48.079 |-INFO  [main] com.jian.Application [675] -| No active profile set, falling back to default profiles: default
+2019-03-12 17:42:50.319 |-INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [90] -| Tomcat initialized with port(s): 8080 (http)
+2019-03-12 17:42:50.337 |-INFO  [main] org.apache.coyote.http11.Http11NioProtocol [173] -| Initializing ProtocolHandler ["http-nio-8080"]
+2019-03-12 17:42:50.348 |-INFO  [main] org.apache.catalina.core.StandardService [173] -| Starting service [Tomcat]
+2019-03-12 17:42:50.349 |-INFO  [main] org.apache.catalina.core.StandardEngine [173] -| Starting Servlet Engine: Apache Tomcat/9.0.12
+2019-03-12 17:42:50.365 |-INFO  [main] org.apache.catalina.core.AprLifecycleListener [173] -| The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_181\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_181/bin/server;C:/Program Files/Java/jre1.8.0_181/bin;C:/Program Files/Java/jre1.8.0_181/lib/amd64;C:\Program Files (x86)\NetSarang\Xshell 6\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk1.8.0_181\jre\bin;D:\Program Files (x86)\Inno Setup 5;C:\Windows\system32;C:\Windows;C:\Windows\system32\wbem;C:\Program Files\nodejs\;D:\Program Files\Microsoft VS Code\bin;D:\Program Files\Python\Scripts\;D:\Program Files\Python\;C:\Users\简二娃\AppData\Local\Programs\Python\Python37\Scripts\;C:\Users\简二娃\AppData\Local\Programs\Python\Python37\;C:\Program Files (x86)\Microsoft Visual Studio\Common\Tools\WinNT;C:\Program Files (x86)\Microsoft Visual Studio\Common\MSDev98\Bin;C:\Program Files (x86)\Microsoft Visual Studio\Common\Tools;C:\Program Files (x86)\Microsoft Visual Studio\VC98\bin;D:\new_workspace_c\emgucv-windesktop 3.3.0.2824\bin;C:\Users\简二娃\AppData\Roaming\npm;D:\Java工具\eclipse;;.]
+2019-03-12 17:42:50.564 |-INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [173] -| Initializing Spring embedded WebApplicationContext
+2019-03-12 17:42:50.566 |-INFO  [main] org.springframework.web.context.ContextLoader [285] -| Root WebApplicationContext: initialization completed in 2411 ms
+2019-03-12 17:42:50.646 |-INFO  [main] org.springframework.boot.web.servlet.ServletRegistrationBean [186] -| Servlet dispatcherServlet mapped to [/]
+2019-03-12 17:42:50.650 |-INFO  [main] org.springframework.boot.web.servlet.ServletRegistrationBean [186] -| Servlet statViewServlet mapped to [/druid/*]
+2019-03-12 17:42:50.656 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-03-12 17:42:50.657 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-03-12 17:42:50.658 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'formContentFilter' to: [/*]
+2019-03-12 17:42:50.658 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'requestContextFilter' to: [/*]
+2019-03-12 17:42:50.659 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [261] -| Mapping filter: 'webStatFilter' to urls: [/*]
+2019-03-12 17:42:50.833 |-INFO  [main] com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure [56] -| Init DruidDataSource
+2019-03-12 17:42:51.458 |-INFO  [main] com.alibaba.druid.pool.DruidDataSource [930] -| {dataSource-1} inited
+2019-03-12 17:42:52.092 |-INFO  [main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor [171] -| Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-12 17:42:52.670 |-INFO  [main] org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler [171] -| Initializing ExecutorService 'taskScheduler'
+2019-03-12 17:42:52.796 |-INFO  [main] net.devh.boot.grpc.server.serverfactory.AbstractGrpcServerFactory [114] -| Registered gRPC service: JdSystem.ClientAuthService, bean: clientServiceImpl, class: com.jian.grpc.ClientServiceImpl
+2019-03-12 17:42:52.804 |-INFO  [main] net.devh.boot.grpc.server.serverfactory.AbstractGrpcServerFactory [114] -| Registered gRPC service: JdSystem.PersonInfoAuthService, bean: personInfoServiceImpl, class: com.jian.grpc.PersonInfoServiceImpl
+2019-03-12 17:42:53.361 |-INFO  [main] net.devh.boot.grpc.server.serverfactory.GrpcServerLifecycle [91] -| gRPC Server started, listening on address: *, port: 50051
+2019-03-12 17:42:53.378 |-INFO  [main] org.apache.coyote.http11.Http11NioProtocol [173] -| Starting ProtocolHandler ["http-nio-8080"]
+2019-03-12 17:42:53.380 |-INFO  [main] org.apache.tomcat.util.net.NioSelectorPool [173] -| Using a shared selector for servlet write/read
+2019-03-12 17:42:53.399 |-INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [204] -| Tomcat started on port(s): 8080 (http) with context path ''
+2019-03-12 17:42:53.404 |-INFO  [main] com.jian.Application [59] -| Started Application in 5.973 seconds (JVM running for 9.524)
+2019-03-12 17:43:21.445 |-INFO  [http-nio-8080-exec-3] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [173] -| Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-12 17:43:21.445 |-INFO  [http-nio-8080-exec-3] org.springframework.web.servlet.DispatcherServlet [521] -| Initializing Servlet 'dispatcherServlet'
+2019-03-12 17:43:21.457 |-INFO  [http-nio-8080-exec-3] org.springframework.web.servlet.DispatcherServlet [543] -| Completed initialization in 12 ms
+2019-03-12 17:45:00.159 |-INFO  [scheduling-1] com.jian.util.ScheduledUtil [38] -| 定时清理过期人脸
+2019-03-12 17:48:00.097 |-INFO  [scheduling-1] com.jian.util.ScheduledUtil [38] -| 定时清理过期人脸
+2019-03-13 10:08:27.246 |-INFO  [main] com.jian.Application [50] -| Starting Application on jianlinwei with PID 3504 (D:\new_workspace\jd_parent\jd_web\target\classes started by jianlinwei in D:\new_workspace\jd_parent\jd_web)
+2019-03-13 10:08:27.255 |-INFO  [main] com.jian.Application [675] -| No active profile set, falling back to default profiles: default
+2019-03-13 10:08:29.506 |-INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [90] -| Tomcat initialized with port(s): 8080 (http)
+2019-03-13 10:08:29.523 |-INFO  [main] org.apache.coyote.http11.Http11NioProtocol [173] -| Initializing ProtocolHandler ["http-nio-8080"]
+2019-03-13 10:08:29.534 |-INFO  [main] org.apache.catalina.core.StandardService [173] -| Starting service [Tomcat]
+2019-03-13 10:08:29.535 |-INFO  [main] org.apache.catalina.core.StandardEngine [173] -| Starting Servlet Engine: Apache Tomcat/9.0.12
+2019-03-13 10:08:29.548 |-INFO  [main] org.apache.catalina.core.AprLifecycleListener [173] -| The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_181\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_181/bin/server;C:/Program Files/Java/jre1.8.0_181/bin;C:/Program Files/Java/jre1.8.0_181/lib/amd64;C:\Program Files (x86)\NetSarang\Xshell 6\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk1.8.0_181\jre\bin;D:\Program Files (x86)\Inno Setup 5;C:\Windows\system32;C:\Windows;C:\Windows\system32\wbem;C:\Program Files\nodejs\;D:\Program Files\Microsoft VS Code\bin;D:\Program Files\Python\Scripts\;D:\Program Files\Python\;C:\Users\简二娃\AppData\Local\Programs\Python\Python37\Scripts\;C:\Users\简二娃\AppData\Local\Programs\Python\Python37\;C:\Program Files (x86)\Microsoft Visual Studio\Common\Tools\WinNT;C:\Program Files (x86)\Microsoft Visual Studio\Common\MSDev98\Bin;C:\Program Files (x86)\Microsoft Visual Studio\Common\Tools;C:\Program Files (x86)\Microsoft Visual Studio\VC98\bin;D:\new_workspace_c\emgucv-windesktop 3.3.0.2824\bin;C:\Users\简二娃\AppData\Roaming\npm;D:\Java工具\eclipse;;.]
+2019-03-13 10:08:29.808 |-INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [173] -| Initializing Spring embedded WebApplicationContext
+2019-03-13 10:08:29.809 |-INFO  [main] org.springframework.web.context.ContextLoader [285] -| Root WebApplicationContext: initialization completed in 2476 ms
+2019-03-13 10:08:29.878 |-INFO  [main] org.springframework.boot.web.servlet.ServletRegistrationBean [186] -| Servlet dispatcherServlet mapped to [/]
+2019-03-13 10:08:29.882 |-INFO  [main] org.springframework.boot.web.servlet.ServletRegistrationBean [186] -| Servlet statViewServlet mapped to [/druid/*]
+2019-03-13 10:08:29.891 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-03-13 10:08:29.891 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-03-13 10:08:29.892 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'formContentFilter' to: [/*]
+2019-03-13 10:08:29.892 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'requestContextFilter' to: [/*]
+2019-03-13 10:08:29.893 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [261] -| Mapping filter: 'webStatFilter' to urls: [/*]
+2019-03-13 10:08:29.993 |-INFO  [main] com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure [56] -| Init DruidDataSource
+2019-03-13 10:08:30.460 |-INFO  [main] com.alibaba.druid.pool.DruidDataSource [930] -| {dataSource-1} inited
+2019-03-13 10:08:31.158 |-INFO  [main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor [171] -| Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-13 10:08:32.051 |-INFO  [main] org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler [171] -| Initializing ExecutorService 'taskScheduler'
+2019-03-13 10:08:32.295 |-INFO  [main] net.devh.boot.grpc.server.serverfactory.AbstractGrpcServerFactory [114] -| Registered gRPC service: JdSystem.ClientAuthService, bean: clientServiceImpl, class: com.jian.grpc.ClientServiceImpl
+2019-03-13 10:08:32.303 |-INFO  [main] net.devh.boot.grpc.server.serverfactory.AbstractGrpcServerFactory [114] -| Registered gRPC service: JdSystem.PersonInfoAuthService, bean: personInfoServiceImpl, class: com.jian.grpc.PersonInfoServiceImpl
+2019-03-13 10:08:32.895 |-INFO  [main] net.devh.boot.grpc.server.serverfactory.GrpcServerLifecycle [91] -| gRPC Server started, listening on address: *, port: 50051
+2019-03-13 10:08:32.911 |-INFO  [main] org.apache.coyote.http11.Http11NioProtocol [173] -| Starting ProtocolHandler ["http-nio-8080"]
+2019-03-13 10:08:32.914 |-INFO  [main] org.apache.tomcat.util.net.NioSelectorPool [173] -| Using a shared selector for servlet write/read
+2019-03-13 10:08:32.937 |-INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [204] -| Tomcat started on port(s): 8080 (http) with context path ''
+2019-03-13 10:08:32.942 |-INFO  [main] com.jian.Application [59] -| Started Application in 6.25 seconds (JVM running for 10.224)
+2019-03-13 10:08:49.026 |-INFO  [http-nio-8080-exec-3] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [173] -| Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-13 10:08:49.027 |-INFO  [http-nio-8080-exec-3] org.springframework.web.servlet.DispatcherServlet [521] -| Initializing Servlet 'dispatcherServlet'
+2019-03-13 10:08:49.044 |-INFO  [http-nio-8080-exec-3] org.springframework.web.servlet.DispatcherServlet [543] -| Completed initialization in 17 ms
+2019-03-13 10:12:36.199 |-INFO  [main] com.jian.Application [50] -| Starting Application on jianlinwei with PID 13692 (D:\new_workspace\jd_parent\jd_web\target\classes started by jianlinwei in D:\new_workspace\jd_parent\jd_web)
+2019-03-13 10:12:36.206 |-INFO  [main] com.jian.Application [675] -| No active profile set, falling back to default profiles: default
+2019-03-13 10:12:38.576 |-INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [90] -| Tomcat initialized with port(s): 8080 (http)
+2019-03-13 10:12:38.593 |-INFO  [main] org.apache.coyote.http11.Http11NioProtocol [173] -| Initializing ProtocolHandler ["http-nio-8080"]
+2019-03-13 10:12:38.605 |-INFO  [main] org.apache.catalina.core.StandardService [173] -| Starting service [Tomcat]
+2019-03-13 10:12:38.606 |-INFO  [main] org.apache.catalina.core.StandardEngine [173] -| Starting Servlet Engine: Apache Tomcat/9.0.12
+2019-03-13 10:12:38.620 |-INFO  [main] org.apache.catalina.core.AprLifecycleListener [173] -| The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_181\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_181/bin/server;C:/Program Files/Java/jre1.8.0_181/bin;C:/Program Files/Java/jre1.8.0_181/lib/amd64;C:\Program Files (x86)\NetSarang\Xshell 6\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk1.8.0_181\jre\bin;D:\Program Files (x86)\Inno Setup 5;C:\Windows\system32;C:\Windows;C:\Windows\system32\wbem;C:\Program Files\nodejs\;D:\Program Files\Microsoft VS Code\bin;D:\Program Files\Python\Scripts\;D:\Program Files\Python\;C:\Users\简二娃\AppData\Local\Programs\Python\Python37\Scripts\;C:\Users\简二娃\AppData\Local\Programs\Python\Python37\;C:\Program Files (x86)\Microsoft Visual Studio\Common\Tools\WinNT;C:\Program Files (x86)\Microsoft Visual Studio\Common\MSDev98\Bin;C:\Program Files (x86)\Microsoft Visual Studio\Common\Tools;C:\Program Files (x86)\Microsoft Visual Studio\VC98\bin;D:\new_workspace_c\emgucv-windesktop 3.3.0.2824\bin;C:\Users\简二娃\AppData\Roaming\npm;D:\Java工具\eclipse;;.]
+2019-03-13 10:12:38.866 |-INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [173] -| Initializing Spring embedded WebApplicationContext
+2019-03-13 10:12:38.867 |-INFO  [main] org.springframework.web.context.ContextLoader [285] -| Root WebApplicationContext: initialization completed in 2579 ms
+2019-03-13 10:12:38.969 |-INFO  [main] org.springframework.boot.web.servlet.ServletRegistrationBean [186] -| Servlet dispatcherServlet mapped to [/]
+2019-03-13 10:12:38.973 |-INFO  [main] org.springframework.boot.web.servlet.ServletRegistrationBean [186] -| Servlet statViewServlet mapped to [/druid/*]
+2019-03-13 10:12:38.990 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-03-13 10:12:38.991 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-03-13 10:12:38.998 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'formContentFilter' to: [/*]
+2019-03-13 10:12:38.999 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'requestContextFilter' to: [/*]
+2019-03-13 10:12:39.001 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [261] -| Mapping filter: 'webStatFilter' to urls: [/*]
+2019-03-13 10:12:39.129 |-INFO  [main] com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure [56] -| Init DruidDataSource
+2019-03-13 10:12:39.600 |-INFO  [main] com.alibaba.druid.pool.DruidDataSource [930] -| {dataSource-1} inited
+2019-03-13 10:12:40.233 |-INFO  [main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor [171] -| Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-13 10:12:40.813 |-INFO  [main] org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler [171] -| Initializing ExecutorService 'taskScheduler'
+2019-03-13 10:12:40.956 |-INFO  [main] net.devh.boot.grpc.server.serverfactory.AbstractGrpcServerFactory [114] -| Registered gRPC service: JdSystem.ClientAuthService, bean: clientServiceImpl, class: com.jian.grpc.ClientServiceImpl
+2019-03-13 10:12:40.964 |-INFO  [main] net.devh.boot.grpc.server.serverfactory.AbstractGrpcServerFactory [114] -| Registered gRPC service: JdSystem.PersonInfoAuthService, bean: personInfoServiceImpl, class: com.jian.grpc.PersonInfoServiceImpl
+2019-03-13 10:12:41.645 |-INFO  [main] net.devh.boot.grpc.server.serverfactory.GrpcServerLifecycle [91] -| gRPC Server started, listening on address: *, port: 50051
+2019-03-13 10:12:41.666 |-INFO  [main] org.apache.coyote.http11.Http11NioProtocol [173] -| Starting ProtocolHandler ["http-nio-8080"]
+2019-03-13 10:12:41.670 |-INFO  [main] org.apache.tomcat.util.net.NioSelectorPool [173] -| Using a shared selector for servlet write/read
+2019-03-13 10:12:41.694 |-INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [204] -| Tomcat started on port(s): 8080 (http) with context path ''
+2019-03-13 10:12:41.700 |-INFO  [main] com.jian.Application [59] -| Started Application in 6.057 seconds (JVM running for 9.404)
+2019-03-13 10:12:44.784 |-INFO  [http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [173] -| Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-13 10:12:44.784 |-INFO  [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet [521] -| Initializing Servlet 'dispatcherServlet'
+2019-03-13 10:12:44.795 |-INFO  [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet [543] -| Completed initialization in 10 ms
+2019-03-13 10:15:36.383 |-INFO  [main] com.jian.Application [50] -| Starting Application on jianlinwei with PID 8464 (D:\new_workspace\jd_parent\jd_web\target\classes started by jianlinwei in D:\new_workspace\jd_parent\jd_web)
+2019-03-13 10:15:36.393 |-INFO  [main] com.jian.Application [675] -| No active profile set, falling back to default profiles: default
+2019-03-13 10:15:38.599 |-INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [90] -| Tomcat initialized with port(s): 8080 (http)
+2019-03-13 10:15:38.622 |-INFO  [main] org.apache.coyote.http11.Http11NioProtocol [173] -| Initializing ProtocolHandler ["http-nio-8080"]
+2019-03-13 10:15:38.658 |-INFO  [main] org.apache.catalina.core.StandardService [173] -| Starting service [Tomcat]
+2019-03-13 10:15:38.660 |-INFO  [main] org.apache.catalina.core.StandardEngine [173] -| Starting Servlet Engine: Apache Tomcat/9.0.12
+2019-03-13 10:15:38.673 |-INFO  [main] org.apache.catalina.core.AprLifecycleListener [173] -| The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_181\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_181/bin/server;C:/Program Files/Java/jre1.8.0_181/bin;C:/Program Files/Java/jre1.8.0_181/lib/amd64;C:\Program Files (x86)\NetSarang\Xshell 6\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk1.8.0_181\jre\bin;D:\Program Files (x86)\Inno Setup 5;C:\Windows\system32;C:\Windows;C:\Windows\system32\wbem;C:\Program Files\nodejs\;D:\Program Files\Microsoft VS Code\bin;D:\Program Files\Python\Scripts\;D:\Program Files\Python\;C:\Users\简二娃\AppData\Local\Programs\Python\Python37\Scripts\;C:\Users\简二娃\AppData\Local\Programs\Python\Python37\;C:\Program Files (x86)\Microsoft Visual Studio\Common\Tools\WinNT;C:\Program Files (x86)\Microsoft Visual Studio\Common\MSDev98\Bin;C:\Program Files (x86)\Microsoft Visual Studio\Common\Tools;C:\Program Files (x86)\Microsoft Visual Studio\VC98\bin;D:\new_workspace_c\emgucv-windesktop 3.3.0.2824\bin;C:\Users\简二娃\AppData\Roaming\npm;D:\Java工具\eclipse;;.]
+2019-03-13 10:15:38.872 |-INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [173] -| Initializing Spring embedded WebApplicationContext
+2019-03-13 10:15:38.872 |-INFO  [main] org.springframework.web.context.ContextLoader [285] -| Root WebApplicationContext: initialization completed in 2404 ms
+2019-03-13 10:15:38.938 |-INFO  [main] org.springframework.boot.web.servlet.ServletRegistrationBean [186] -| Servlet dispatcherServlet mapped to [/]
+2019-03-13 10:15:38.941 |-INFO  [main] org.springframework.boot.web.servlet.ServletRegistrationBean [186] -| Servlet statViewServlet mapped to [/druid/*]
+2019-03-13 10:15:38.949 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-03-13 10:15:38.950 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-03-13 10:15:38.951 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'formContentFilter' to: [/*]
+2019-03-13 10:15:38.953 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'requestContextFilter' to: [/*]
+2019-03-13 10:15:38.953 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [261] -| Mapping filter: 'webStatFilter' to urls: [/*]
+2019-03-13 10:15:39.041 |-INFO  [main] com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure [56] -| Init DruidDataSource
+2019-03-13 10:15:39.467 |-INFO  [main] com.alibaba.druid.pool.DruidDataSource [930] -| {dataSource-1} inited
+2019-03-13 10:15:40.099 |-INFO  [main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor [171] -| Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-13 10:15:40.705 |-INFO  [main] org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler [171] -| Initializing ExecutorService 'taskScheduler'
+2019-03-13 10:15:40.839 |-INFO  [main] net.devh.boot.grpc.server.serverfactory.AbstractGrpcServerFactory [114] -| Registered gRPC service: JdSystem.ClientAuthService, bean: clientServiceImpl, class: com.jian.grpc.ClientServiceImpl
+2019-03-13 10:15:40.849 |-INFO  [main] net.devh.boot.grpc.server.serverfactory.AbstractGrpcServerFactory [114] -| Registered gRPC service: JdSystem.PersonInfoAuthService, bean: personInfoServiceImpl, class: com.jian.grpc.PersonInfoServiceImpl
+2019-03-13 10:15:41.432 |-INFO  [main] net.devh.boot.grpc.server.serverfactory.GrpcServerLifecycle [91] -| gRPC Server started, listening on address: *, port: 50051
+2019-03-13 10:15:41.451 |-INFO  [main] org.apache.coyote.http11.Http11NioProtocol [173] -| Starting ProtocolHandler ["http-nio-8080"]
+2019-03-13 10:15:41.454 |-INFO  [main] org.apache.tomcat.util.net.NioSelectorPool [173] -| Using a shared selector for servlet write/read
+2019-03-13 10:15:41.473 |-INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [204] -| Tomcat started on port(s): 8080 (http) with context path ''
+2019-03-13 10:15:41.478 |-INFO  [main] com.jian.Application [59] -| Started Application in 5.649 seconds (JVM running for 9.031)
+2019-03-13 10:15:46.626 |-INFO  [http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [173] -| Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-13 10:15:46.626 |-INFO  [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet [521] -| Initializing Servlet 'dispatcherServlet'
+2019-03-13 10:15:46.636 |-INFO  [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet [543] -| Completed initialization in 10 ms
+2019-03-13 10:15:46.811 |-ERROR [http-nio-8080-exec-1] com.jian.service.impl.JdPersonServiceImpl [172] -| Value for idCard cannot be null
+java.lang.RuntimeException: Value for idCard cannot be null
+	at com.jian.entity.JdPersonsExample$GeneratedCriteria.addCriterion(JdPersonsExample.java:96) ~[classes/:?]
+	at com.jian.entity.JdPersonsExample$GeneratedCriteria.andIdCardEqualTo(JdPersonsExample.java:189) ~[classes/:?]
+	at com.jian.entity.JdPersonsExample$Criteria.andIdCardEqualTo(JdPersonsExample.java:1) ~[classes/:?]
+	at com.jian.service.impl.JdPersonServiceImpl.updatePersons(JdPersonServiceImpl.java:115) [classes/:?]
+	at com.jian.controller.PersonInfoController.personInfo(PersonInfoController.java:32) [classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_181]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_181]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_181]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_181]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:215) [spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:142) [spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102) [spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) [spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800) [spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) [spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038) [spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) [spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998) [spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:901) [spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875) [spring-webmvc-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123) [druid-1.1.10.jar:1.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) [spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92) [spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) [spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) [spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107) [spring-web-5.1.2.RELEASE.jar:5.1.2.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [?:1.8.0_181]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [?:1.8.0_181]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.12.jar:9.0.12]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_181]
+2019-03-13 10:18:43.242 |-INFO  [main] com.jian.Application [50] -| Starting Application on jianlinwei with PID 5892 (D:\new_workspace\jd_parent\jd_web\target\classes started by jianlinwei in D:\new_workspace\jd_parent\jd_web)
+2019-03-13 10:18:43.249 |-INFO  [main] com.jian.Application [675] -| No active profile set, falling back to default profiles: default
+2019-03-13 10:18:45.481 |-INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [90] -| Tomcat initialized with port(s): 8080 (http)
+2019-03-13 10:18:45.499 |-INFO  [main] org.apache.coyote.http11.Http11NioProtocol [173] -| Initializing ProtocolHandler ["http-nio-8080"]
+2019-03-13 10:18:45.510 |-INFO  [main] org.apache.catalina.core.StandardService [173] -| Starting service [Tomcat]
+2019-03-13 10:18:45.512 |-INFO  [main] org.apache.catalina.core.StandardEngine [173] -| Starting Servlet Engine: Apache Tomcat/9.0.12
+2019-03-13 10:18:45.527 |-INFO  [main] org.apache.catalina.core.AprLifecycleListener [173] -| The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_181\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_181/bin/server;C:/Program Files/Java/jre1.8.0_181/bin;C:/Program Files/Java/jre1.8.0_181/lib/amd64;C:\Program Files (x86)\NetSarang\Xshell 6\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk1.8.0_181\jre\bin;D:\Program Files (x86)\Inno Setup 5;C:\Windows\system32;C:\Windows;C:\Windows\system32\wbem;C:\Program Files\nodejs\;D:\Program Files\Microsoft VS Code\bin;D:\Program Files\Python\Scripts\;D:\Program Files\Python\;C:\Users\简二娃\AppData\Local\Programs\Python\Python37\Scripts\;C:\Users\简二娃\AppData\Local\Programs\Python\Python37\;C:\Program Files (x86)\Microsoft Visual Studio\Common\Tools\WinNT;C:\Program Files (x86)\Microsoft Visual Studio\Common\MSDev98\Bin;C:\Program Files (x86)\Microsoft Visual Studio\Common\Tools;C:\Program Files (x86)\Microsoft Visual Studio\VC98\bin;D:\new_workspace_c\emgucv-windesktop 3.3.0.2824\bin;C:\Users\简二娃\AppData\Roaming\npm;D:\Java工具\eclipse;;.]
+2019-03-13 10:18:45.769 |-INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [173] -| Initializing Spring embedded WebApplicationContext
+2019-03-13 10:18:45.769 |-INFO  [main] org.springframework.web.context.ContextLoader [285] -| Root WebApplicationContext: initialization completed in 2436 ms
+2019-03-13 10:18:45.831 |-INFO  [main] org.springframework.boot.web.servlet.ServletRegistrationBean [186] -| Servlet dispatcherServlet mapped to [/]
+2019-03-13 10:18:45.834 |-INFO  [main] org.springframework.boot.web.servlet.ServletRegistrationBean [186] -| Servlet statViewServlet mapped to [/druid/*]
+2019-03-13 10:18:45.843 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-03-13 10:18:45.843 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-03-13 10:18:45.844 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'formContentFilter' to: [/*]
+2019-03-13 10:18:45.844 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'requestContextFilter' to: [/*]
+2019-03-13 10:18:45.847 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [261] -| Mapping filter: 'webStatFilter' to urls: [/*]
+2019-03-13 10:18:45.931 |-INFO  [main] com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure [56] -| Init DruidDataSource
+2019-03-13 10:18:46.359 |-INFO  [main] com.alibaba.druid.pool.DruidDataSource [930] -| {dataSource-1} inited
+2019-03-13 10:18:47.017 |-INFO  [main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor [171] -| Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-13 10:18:47.586 |-INFO  [main] org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler [171] -| Initializing ExecutorService 'taskScheduler'
+2019-03-13 10:18:47.737 |-INFO  [main] net.devh.boot.grpc.server.serverfactory.AbstractGrpcServerFactory [114] -| Registered gRPC service: JdSystem.ClientAuthService, bean: clientServiceImpl, class: com.jian.grpc.ClientServiceImpl
+2019-03-13 10:18:47.745 |-INFO  [main] net.devh.boot.grpc.server.serverfactory.AbstractGrpcServerFactory [114] -| Registered gRPC service: JdSystem.PersonInfoAuthService, bean: personInfoServiceImpl, class: com.jian.grpc.PersonInfoServiceImpl
+2019-03-13 10:18:48.333 |-INFO  [main] net.devh.boot.grpc.server.serverfactory.GrpcServerLifecycle [91] -| gRPC Server started, listening on address: *, port: 50051
+2019-03-13 10:18:48.346 |-INFO  [main] org.apache.coyote.http11.Http11NioProtocol [173] -| Starting ProtocolHandler ["http-nio-8080"]
+2019-03-13 10:18:48.348 |-INFO  [main] org.apache.tomcat.util.net.NioSelectorPool [173] -| Using a shared selector for servlet write/read
+2019-03-13 10:18:48.364 |-INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [204] -| Tomcat started on port(s): 8080 (http) with context path ''
+2019-03-13 10:18:48.368 |-INFO  [main] com.jian.Application [59] -| Started Application in 5.668 seconds (JVM running for 8.946)
+2019-03-13 10:18:57.071 |-INFO  [http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [173] -| Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-13 10:18:57.071 |-INFO  [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet [521] -| Initializing Servlet 'dispatcherServlet'
+2019-03-13 10:18:57.082 |-INFO  [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet [543] -| Completed initialization in 11 ms
+2019-03-13 10:19:00.470 |-INFO  [scheduling-1] com.jian.util.ScheduledUtil [38] -| 定时清理过期人脸
+2019-03-13 10:20:32.585 |-INFO  [main] com.jian.Application [50] -| Starting Application on jianlinwei with PID 11632 (D:\new_workspace\jd_parent\jd_web\target\classes started by jianlinwei in D:\new_workspace\jd_parent\jd_web)
+2019-03-13 10:20:32.592 |-INFO  [main] com.jian.Application [675] -| No active profile set, falling back to default profiles: default
+2019-03-13 10:20:35.396 |-INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [90] -| Tomcat initialized with port(s): 8080 (http)
+2019-03-13 10:20:35.415 |-INFO  [main] org.apache.coyote.http11.Http11NioProtocol [173] -| Initializing ProtocolHandler ["http-nio-8080"]
+2019-03-13 10:20:35.425 |-INFO  [main] org.apache.catalina.core.StandardService [173] -| Starting service [Tomcat]
+2019-03-13 10:20:35.427 |-INFO  [main] org.apache.catalina.core.StandardEngine [173] -| Starting Servlet Engine: Apache Tomcat/9.0.12
+2019-03-13 10:20:35.441 |-INFO  [main] org.apache.catalina.core.AprLifecycleListener [173] -| The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_181\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_181/bin/server;C:/Program Files/Java/jre1.8.0_181/bin;C:/Program Files/Java/jre1.8.0_181/lib/amd64;C:\Program Files (x86)\NetSarang\Xshell 6\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk1.8.0_181\jre\bin;D:\Program Files (x86)\Inno Setup 5;C:\Windows\system32;C:\Windows;C:\Windows\system32\wbem;C:\Program Files\nodejs\;D:\Program Files\Microsoft VS Code\bin;D:\Program Files\Python\Scripts\;D:\Program Files\Python\;C:\Users\简二娃\AppData\Local\Programs\Python\Python37\Scripts\;C:\Users\简二娃\AppData\Local\Programs\Python\Python37\;C:\Program Files (x86)\Microsoft Visual Studio\Common\Tools\WinNT;C:\Program Files (x86)\Microsoft Visual Studio\Common\MSDev98\Bin;C:\Program Files (x86)\Microsoft Visual Studio\Common\Tools;C:\Program Files (x86)\Microsoft Visual Studio\VC98\bin;D:\new_workspace_c\emgucv-windesktop 3.3.0.2824\bin;C:\Users\简二娃\AppData\Roaming\npm;D:\Java工具\eclipse;;.]
+2019-03-13 10:20:35.718 |-INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [173] -| Initializing Spring embedded WebApplicationContext
+2019-03-13 10:20:35.718 |-INFO  [main] org.springframework.web.context.ContextLoader [285] -| Root WebApplicationContext: initialization completed in 3041 ms
+2019-03-13 10:20:35.797 |-INFO  [main] org.springframework.boot.web.servlet.ServletRegistrationBean [186] -| Servlet dispatcherServlet mapped to [/]
+2019-03-13 10:20:35.800 |-INFO  [main] org.springframework.boot.web.servlet.ServletRegistrationBean [186] -| Servlet statViewServlet mapped to [/druid/*]
+2019-03-13 10:20:35.810 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-03-13 10:20:35.812 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-03-13 10:20:35.812 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'formContentFilter' to: [/*]
+2019-03-13 10:20:35.813 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'requestContextFilter' to: [/*]
+2019-03-13 10:20:35.814 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [261] -| Mapping filter: 'webStatFilter' to urls: [/*]
+2019-03-13 10:20:35.926 |-INFO  [main] com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure [56] -| Init DruidDataSource
+2019-03-13 10:20:36.404 |-INFO  [main] com.alibaba.druid.pool.DruidDataSource [930] -| {dataSource-1} inited
+2019-03-13 10:20:37.201 |-INFO  [main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor [171] -| Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-13 10:20:37.846 |-INFO  [main] org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler [171] -| Initializing ExecutorService 'taskScheduler'
+2019-03-13 10:20:37.999 |-INFO  [main] net.devh.boot.grpc.server.serverfactory.AbstractGrpcServerFactory [114] -| Registered gRPC service: JdSystem.ClientAuthService, bean: clientServiceImpl, class: com.jian.grpc.ClientServiceImpl
+2019-03-13 10:20:38.009 |-INFO  [main] net.devh.boot.grpc.server.serverfactory.AbstractGrpcServerFactory [114] -| Registered gRPC service: JdSystem.PersonInfoAuthService, bean: personInfoServiceImpl, class: com.jian.grpc.PersonInfoServiceImpl
+2019-03-13 10:20:38.742 |-INFO  [main] net.devh.boot.grpc.server.serverfactory.GrpcServerLifecycle [91] -| gRPC Server started, listening on address: *, port: 50051
+2019-03-13 10:20:38.763 |-INFO  [main] org.apache.coyote.http11.Http11NioProtocol [173] -| Starting ProtocolHandler ["http-nio-8080"]
+2019-03-13 10:20:38.766 |-INFO  [main] org.apache.tomcat.util.net.NioSelectorPool [173] -| Using a shared selector for servlet write/read
+2019-03-13 10:20:38.802 |-INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [204] -| Tomcat started on port(s): 8080 (http) with context path ''
+2019-03-13 10:20:38.808 |-INFO  [main] com.jian.Application [59] -| Started Application in 6.859 seconds (JVM running for 10.493)
+2019-03-13 10:21:23.190 |-INFO  [http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [173] -| Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-13 10:21:23.190 |-INFO  [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet [521] -| Initializing Servlet 'dispatcherServlet'
+2019-03-13 10:21:23.207 |-INFO  [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet [543] -| Completed initialization in 16 ms
+2019-03-13 10:24:21.538 |-INFO  [main] com.jian.Application [50] -| Starting Application on jianlinwei with PID 4320 (D:\new_workspace\jd_parent\jd_web\target\classes started by jianlinwei in D:\new_workspace\jd_parent\jd_web)
+2019-03-13 10:24:21.550 |-INFO  [main] com.jian.Application [675] -| No active profile set, falling back to default profiles: default
+2019-03-13 10:24:24.150 |-INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [90] -| Tomcat initialized with port(s): 8080 (http)
+2019-03-13 10:24:24.172 |-INFO  [main] org.apache.coyote.http11.Http11NioProtocol [173] -| Initializing ProtocolHandler ["http-nio-8080"]
+2019-03-13 10:24:24.184 |-INFO  [main] org.apache.catalina.core.StandardService [173] -| Starting service [Tomcat]
+2019-03-13 10:24:24.185 |-INFO  [main] org.apache.catalina.core.StandardEngine [173] -| Starting Servlet Engine: Apache Tomcat/9.0.12
+2019-03-13 10:24:24.204 |-INFO  [main] org.apache.catalina.core.AprLifecycleListener [173] -| The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_181\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_181/bin/server;C:/Program Files/Java/jre1.8.0_181/bin;C:/Program Files/Java/jre1.8.0_181/lib/amd64;C:\Program Files (x86)\NetSarang\Xshell 6\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk1.8.0_181\jre\bin;D:\Program Files (x86)\Inno Setup 5;C:\Windows\system32;C:\Windows;C:\Windows\system32\wbem;C:\Program Files\nodejs\;D:\Program Files\Microsoft VS Code\bin;D:\Program Files\Python\Scripts\;D:\Program Files\Python\;C:\Users\简二娃\AppData\Local\Programs\Python\Python37\Scripts\;C:\Users\简二娃\AppData\Local\Programs\Python\Python37\;C:\Program Files (x86)\Microsoft Visual Studio\Common\Tools\WinNT;C:\Program Files (x86)\Microsoft Visual Studio\Common\MSDev98\Bin;C:\Program Files (x86)\Microsoft Visual Studio\Common\Tools;C:\Program Files (x86)\Microsoft Visual Studio\VC98\bin;D:\new_workspace_c\emgucv-windesktop 3.3.0.2824\bin;C:\Users\简二娃\AppData\Roaming\npm;D:\Java工具\eclipse;;.]
+2019-03-13 10:24:24.446 |-INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [173] -| Initializing Spring embedded WebApplicationContext
+2019-03-13 10:24:24.446 |-INFO  [main] org.springframework.web.context.ContextLoader [285] -| Root WebApplicationContext: initialization completed in 2778 ms
+2019-03-13 10:24:24.521 |-INFO  [main] org.springframework.boot.web.servlet.ServletRegistrationBean [186] -| Servlet dispatcherServlet mapped to [/]
+2019-03-13 10:24:24.526 |-INFO  [main] org.springframework.boot.web.servlet.ServletRegistrationBean [186] -| Servlet statViewServlet mapped to [/druid/*]
+2019-03-13 10:24:24.537 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-03-13 10:24:24.538 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-03-13 10:24:24.539 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'formContentFilter' to: [/*]
+2019-03-13 10:24:24.539 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'requestContextFilter' to: [/*]
+2019-03-13 10:24:24.540 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [261] -| Mapping filter: 'webStatFilter' to urls: [/*]
+2019-03-13 10:24:24.661 |-INFO  [main] com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure [56] -| Init DruidDataSource
+2019-03-13 10:24:25.143 |-INFO  [main] com.alibaba.druid.pool.DruidDataSource [930] -| {dataSource-1} inited
+2019-03-13 10:24:25.917 |-INFO  [main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor [171] -| Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-13 10:24:26.602 |-INFO  [main] org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler [171] -| Initializing ExecutorService 'taskScheduler'
+2019-03-13 10:24:26.762 |-INFO  [main] net.devh.boot.grpc.server.serverfactory.AbstractGrpcServerFactory [114] -| Registered gRPC service: JdSystem.ClientAuthService, bean: clientServiceImpl, class: com.jian.grpc.ClientServiceImpl
+2019-03-13 10:24:26.772 |-INFO  [main] net.devh.boot.grpc.server.serverfactory.AbstractGrpcServerFactory [114] -| Registered gRPC service: JdSystem.PersonInfoAuthService, bean: personInfoServiceImpl, class: com.jian.grpc.PersonInfoServiceImpl
+2019-03-13 10:24:27.529 |-INFO  [main] net.devh.boot.grpc.server.serverfactory.GrpcServerLifecycle [91] -| gRPC Server started, listening on address: *, port: 50051
+2019-03-13 10:24:27.550 |-INFO  [main] org.apache.coyote.http11.Http11NioProtocol [173] -| Starting ProtocolHandler ["http-nio-8080"]
+2019-03-13 10:24:27.555 |-INFO  [main] org.apache.tomcat.util.net.NioSelectorPool [173] -| Using a shared selector for servlet write/read
+2019-03-13 10:24:27.635 |-INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [204] -| Tomcat started on port(s): 8080 (http) with context path ''
+2019-03-13 10:24:27.722 |-INFO  [main] com.jian.Application [59] -| Started Application in 6.836 seconds (JVM running for 10.21)
+2019-03-13 10:24:35.851 |-INFO  [http-nio-8080-exec-2] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [173] -| Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-13 10:24:35.852 |-INFO  [http-nio-8080-exec-2] org.springframework.web.servlet.DispatcherServlet [521] -| Initializing Servlet 'dispatcherServlet'
+2019-03-13 10:24:35.866 |-INFO  [http-nio-8080-exec-2] org.springframework.web.servlet.DispatcherServlet [543] -| Completed initialization in 14 ms
+2019-03-13 10:25:35.390 |-INFO  [main] com.jian.Application [50] -| Starting Application on jianlinwei with PID 13700 (D:\new_workspace\jd_parent\jd_web\target\classes started by jianlinwei in D:\new_workspace\jd_parent\jd_web)
+2019-03-13 10:25:35.398 |-INFO  [main] com.jian.Application [675] -| No active profile set, falling back to default profiles: default
+2019-03-13 10:25:38.025 |-INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [90] -| Tomcat initialized with port(s): 8080 (http)
+2019-03-13 10:25:38.043 |-INFO  [main] org.apache.coyote.http11.Http11NioProtocol [173] -| Initializing ProtocolHandler ["http-nio-8080"]
+2019-03-13 10:25:38.055 |-INFO  [main] org.apache.catalina.core.StandardService [173] -| Starting service [Tomcat]
+2019-03-13 10:25:38.056 |-INFO  [main] org.apache.catalina.core.StandardEngine [173] -| Starting Servlet Engine: Apache Tomcat/9.0.12
+2019-03-13 10:25:38.071 |-INFO  [main] org.apache.catalina.core.AprLifecycleListener [173] -| The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_181\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_181/bin/server;C:/Program Files/Java/jre1.8.0_181/bin;C:/Program Files/Java/jre1.8.0_181/lib/amd64;C:\Program Files (x86)\NetSarang\Xshell 6\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk1.8.0_181\jre\bin;D:\Program Files (x86)\Inno Setup 5;C:\Windows\system32;C:\Windows;C:\Windows\system32\wbem;C:\Program Files\nodejs\;D:\Program Files\Microsoft VS Code\bin;D:\Program Files\Python\Scripts\;D:\Program Files\Python\;C:\Users\简二娃\AppData\Local\Programs\Python\Python37\Scripts\;C:\Users\简二娃\AppData\Local\Programs\Python\Python37\;C:\Program Files (x86)\Microsoft Visual Studio\Common\Tools\WinNT;C:\Program Files (x86)\Microsoft Visual Studio\Common\MSDev98\Bin;C:\Program Files (x86)\Microsoft Visual Studio\Common\Tools;C:\Program Files (x86)\Microsoft Visual Studio\VC98\bin;D:\new_workspace_c\emgucv-windesktop 3.3.0.2824\bin;C:\Users\简二娃\AppData\Roaming\npm;D:\Java工具\eclipse;;.]
+2019-03-13 10:25:38.300 |-INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [173] -| Initializing Spring embedded WebApplicationContext
+2019-03-13 10:25:38.301 |-INFO  [main] org.springframework.web.context.ContextLoader [285] -| Root WebApplicationContext: initialization completed in 2817 ms
+2019-03-13 10:25:38.375 |-INFO  [main] org.springframework.boot.web.servlet.ServletRegistrationBean [186] -| Servlet dispatcherServlet mapped to [/]
+2019-03-13 10:25:38.378 |-INFO  [main] org.springframework.boot.web.servlet.ServletRegistrationBean [186] -| Servlet statViewServlet mapped to [/druid/*]
+2019-03-13 10:25:38.385 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-03-13 10:25:38.385 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-03-13 10:25:38.386 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'formContentFilter' to: [/*]
+2019-03-13 10:25:38.386 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'requestContextFilter' to: [/*]
+2019-03-13 10:25:38.387 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [261] -| Mapping filter: 'webStatFilter' to urls: [/*]
+2019-03-13 10:25:38.502 |-INFO  [main] com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure [56] -| Init DruidDataSource
+2019-03-13 10:25:39.018 |-INFO  [main] com.alibaba.druid.pool.DruidDataSource [930] -| {dataSource-1} inited
+2019-03-13 10:25:39.805 |-INFO  [main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor [171] -| Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-13 10:25:40.647 |-INFO  [main] org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler [171] -| Initializing ExecutorService 'taskScheduler'
+2019-03-13 10:25:40.854 |-INFO  [main] net.devh.boot.grpc.server.serverfactory.AbstractGrpcServerFactory [114] -| Registered gRPC service: JdSystem.ClientAuthService, bean: clientServiceImpl, class: com.jian.grpc.ClientServiceImpl
+2019-03-13 10:25:40.870 |-INFO  [main] net.devh.boot.grpc.server.serverfactory.AbstractGrpcServerFactory [114] -| Registered gRPC service: JdSystem.PersonInfoAuthService, bean: personInfoServiceImpl, class: com.jian.grpc.PersonInfoServiceImpl
+2019-03-13 10:25:41.695 |-INFO  [main] net.devh.boot.grpc.server.serverfactory.GrpcServerLifecycle [91] -| gRPC Server started, listening on address: *, port: 50051
+2019-03-13 10:25:41.722 |-INFO  [main] org.apache.coyote.http11.Http11NioProtocol [173] -| Starting ProtocolHandler ["http-nio-8080"]
+2019-03-13 10:25:41.726 |-INFO  [main] org.apache.tomcat.util.net.NioSelectorPool [173] -| Using a shared selector for servlet write/read
+2019-03-13 10:25:41.771 |-INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [204] -| Tomcat started on port(s): 8080 (http) with context path ''
+2019-03-13 10:25:41.782 |-INFO  [main] com.jian.Application [59] -| Started Application in 7.051 seconds (JVM running for 10.618)
+2019-03-13 10:26:18.183 |-INFO  [http-nio-8080-exec-10] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [173] -| Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-13 10:26:18.184 |-INFO  [http-nio-8080-exec-10] org.springframework.web.servlet.DispatcherServlet [521] -| Initializing Servlet 'dispatcherServlet'
+2019-03-13 10:26:18.203 |-INFO  [http-nio-8080-exec-10] org.springframework.web.servlet.DispatcherServlet [543] -| Completed initialization in 19 ms
+2019-03-13 10:27:00.150 |-INFO  [scheduling-1] com.jian.util.ScheduledUtil [38] -| 定时清理过期人脸
+2019-03-13 10:27:48.495 |-INFO  [main] com.jian.Application [50] -| Starting Application on jianlinwei with PID 14084 (D:\new_workspace\jd_parent\jd_web\target\classes started by jianlinwei in D:\new_workspace\jd_parent\jd_web)
+2019-03-13 10:27:48.503 |-INFO  [main] com.jian.Application [675] -| No active profile set, falling back to default profiles: default
+2019-03-13 10:27:51.085 |-INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [90] -| Tomcat initialized with port(s): 8080 (http)
+2019-03-13 10:27:51.108 |-INFO  [main] org.apache.coyote.http11.Http11NioProtocol [173] -| Initializing ProtocolHandler ["http-nio-8080"]
+2019-03-13 10:27:51.122 |-INFO  [main] org.apache.catalina.core.StandardService [173] -| Starting service [Tomcat]
+2019-03-13 10:27:51.123 |-INFO  [main] org.apache.catalina.core.StandardEngine [173] -| Starting Servlet Engine: Apache Tomcat/9.0.12
+2019-03-13 10:27:51.147 |-INFO  [main] org.apache.catalina.core.AprLifecycleListener [173] -| The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_181\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_181/bin/server;C:/Program Files/Java/jre1.8.0_181/bin;C:/Program Files/Java/jre1.8.0_181/lib/amd64;C:\Program Files (x86)\NetSarang\Xshell 6\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk1.8.0_181\jre\bin;D:\Program Files (x86)\Inno Setup 5;C:\Windows\system32;C:\Windows;C:\Windows\system32\wbem;C:\Program Files\nodejs\;D:\Program Files\Microsoft VS Code\bin;D:\Program Files\Python\Scripts\;D:\Program Files\Python\;C:\Users\简二娃\AppData\Local\Programs\Python\Python37\Scripts\;C:\Users\简二娃\AppData\Local\Programs\Python\Python37\;C:\Program Files (x86)\Microsoft Visual Studio\Common\Tools\WinNT;C:\Program Files (x86)\Microsoft Visual Studio\Common\MSDev98\Bin;C:\Program Files (x86)\Microsoft Visual Studio\Common\Tools;C:\Program Files (x86)\Microsoft Visual Studio\VC98\bin;D:\new_workspace_c\emgucv-windesktop 3.3.0.2824\bin;C:\Users\简二娃\AppData\Roaming\npm;D:\Java工具\eclipse;;.]
+2019-03-13 10:27:51.379 |-INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [173] -| Initializing Spring embedded WebApplicationContext
+2019-03-13 10:27:51.380 |-INFO  [main] org.springframework.web.context.ContextLoader [285] -| Root WebApplicationContext: initialization completed in 2793 ms
+2019-03-13 10:27:51.450 |-INFO  [main] org.springframework.boot.web.servlet.ServletRegistrationBean [186] -| Servlet dispatcherServlet mapped to [/]
+2019-03-13 10:27:51.457 |-INFO  [main] org.springframework.boot.web.servlet.ServletRegistrationBean [186] -| Servlet statViewServlet mapped to [/druid/*]
+2019-03-13 10:27:51.465 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-03-13 10:27:51.466 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-03-13 10:27:51.467 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'formContentFilter' to: [/*]
+2019-03-13 10:27:51.467 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'requestContextFilter' to: [/*]
+2019-03-13 10:27:51.468 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [261] -| Mapping filter: 'webStatFilter' to urls: [/*]
+2019-03-13 10:27:51.594 |-INFO  [main] com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure [56] -| Init DruidDataSource
+2019-03-13 10:27:52.077 |-INFO  [main] com.alibaba.druid.pool.DruidDataSource [930] -| {dataSource-1} inited
+2019-03-13 10:27:52.855 |-INFO  [main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor [171] -| Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-13 10:27:53.471 |-INFO  [main] org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler [171] -| Initializing ExecutorService 'taskScheduler'
+2019-03-13 10:27:53.659 |-INFO  [main] net.devh.boot.grpc.server.serverfactory.AbstractGrpcServerFactory [114] -| Registered gRPC service: JdSystem.ClientAuthService, bean: clientServiceImpl, class: com.jian.grpc.ClientServiceImpl
+2019-03-13 10:27:53.669 |-INFO  [main] net.devh.boot.grpc.server.serverfactory.AbstractGrpcServerFactory [114] -| Registered gRPC service: JdSystem.PersonInfoAuthService, bean: personInfoServiceImpl, class: com.jian.grpc.PersonInfoServiceImpl
+2019-03-13 10:27:54.561 |-INFO  [main] net.devh.boot.grpc.server.serverfactory.GrpcServerLifecycle [91] -| gRPC Server started, listening on address: *, port: 50051
+2019-03-13 10:27:54.583 |-INFO  [main] org.apache.coyote.http11.Http11NioProtocol [173] -| Starting ProtocolHandler ["http-nio-8080"]
+2019-03-13 10:27:54.586 |-INFO  [main] org.apache.tomcat.util.net.NioSelectorPool [173] -| Using a shared selector for servlet write/read
+2019-03-13 10:27:54.633 |-INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [204] -| Tomcat started on port(s): 8080 (http) with context path ''
+2019-03-13 10:27:54.650 |-INFO  [main] com.jian.Application [59] -| Started Application in 6.777 seconds (JVM running for 10.116)
+2019-03-13 10:27:58.648 |-INFO  [http-nio-8080-exec-1] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [173] -| Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-13 10:27:58.648 |-INFO  [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet [521] -| Initializing Servlet 'dispatcherServlet'
+2019-03-13 10:27:58.661 |-INFO  [http-nio-8080-exec-1] org.springframework.web.servlet.DispatcherServlet [543] -| Completed initialization in 12 ms
+2019-03-13 10:28:21.611 |-INFO  [grpc-default-worker-ELG-3-1] io.grpc.netty.NettyServerTransport.connections [197] -| Transport failed
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[?:1.8.0_181]
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[?:1.8.0_181]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[?:1.8.0_181]
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[?:1.8.0_181]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380) ~[?:1.8.0_181]
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288) ~[netty-buffer-4.1.29.Final.jar:4.1.29.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1108) ~[netty-buffer-4.1.29.Final.jar:4.1.29.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:347) ~[netty-transport-4.1.29.Final.jar:4.1.29.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) [netty-transport-4.1.29.Final.jar:4.1.29.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:628) [netty-transport-4.1.29.Final.jar:4.1.29.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:563) [netty-transport-4.1.29.Final.jar:4.1.29.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480) [netty-transport-4.1.29.Final.jar:4.1.29.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442) [netty-transport-4.1.29.Final.jar:4.1.29.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884) [netty-common-4.1.29.Final.jar:4.1.29.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.29.Final.jar:4.1.29.Final]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_181]
+2019-03-13 10:31:00.153 |-INFO  [scheduling-1] com.jian.util.ScheduledUtil [38] -| 定时清理过期人脸
+2019-03-13 10:31:00.228 |-INFO  [scheduling-1] com.jian.util.ScheduledUtil [38] -| 定时清理过期人脸
+2019-03-13 10:32:00.084 |-INFO  [scheduling-1] com.jian.util.ScheduledUtil [38] -| 定时清理过期人脸
+2019-03-13 10:32:00.151 |-INFO  [scheduling-1] com.jian.util.ScheduledUtil [38] -| 定时清理过期人脸
+2019-03-13 10:33:00.086 |-INFO  [scheduling-1] com.jian.util.ScheduledUtil [38] -| 定时清理过期人脸
+2019-03-13 10:33:00.165 |-INFO  [scheduling-1] com.jian.util.ScheduledUtil [38] -| 定时清理过期人脸
+2019-03-13 10:35:00.100 |-INFO  [scheduling-1] com.jian.util.ScheduledUtil [38] -| 定时清理过期人脸
+2019-03-13 10:35:00.178 |-INFO  [scheduling-1] com.jian.util.ScheduledUtil [38] -| 定时清理过期人脸
+2019-03-13 10:36:00.067 |-INFO  [scheduling-1] com.jian.util.ScheduledUtil [38] -| 定时清理过期人脸
+2019-03-13 10:36:00.134 |-INFO  [scheduling-1] com.jian.util.ScheduledUtil [38] -| 定时清理过期人脸
+2019-03-13 10:37:00.080 |-INFO  [scheduling-1] com.jian.util.ScheduledUtil [38] -| 定时清理过期人脸
+2019-03-13 10:37:00.125 |-INFO  [scheduling-1] com.jian.util.ScheduledUtil [38] -| 定时清理过期人脸
+2019-03-13 10:39:32.143 |-INFO  [main] com.jian.Application [50] -| Starting Application on jianlinwei with PID 14156 (D:\new_workspace\jd_parent\jd_web\target\classes started by jianlinwei in D:\new_workspace\jd_parent\jd_web)
+2019-03-13 10:39:32.153 |-INFO  [main] com.jian.Application [675] -| No active profile set, falling back to default profiles: default
+2019-03-13 10:39:34.363 |-INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [90] -| Tomcat initialized with port(s): 8080 (http)
+2019-03-13 10:39:34.380 |-INFO  [main] org.apache.coyote.http11.Http11NioProtocol [173] -| Initializing ProtocolHandler ["http-nio-8080"]
+2019-03-13 10:39:34.390 |-INFO  [main] org.apache.catalina.core.StandardService [173] -| Starting service [Tomcat]
+2019-03-13 10:39:34.391 |-INFO  [main] org.apache.catalina.core.StandardEngine [173] -| Starting Servlet Engine: Apache Tomcat/9.0.12
+2019-03-13 10:39:34.405 |-INFO  [main] org.apache.catalina.core.AprLifecycleListener [173] -| The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_181\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_181/bin/server;C:/Program Files/Java/jre1.8.0_181/bin;C:/Program Files/Java/jre1.8.0_181/lib/amd64;C:\Program Files (x86)\NetSarang\Xshell 6\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk1.8.0_181\jre\bin;D:\Program Files (x86)\Inno Setup 5;C:\Windows\system32;C:\Windows;C:\Windows\system32\wbem;C:\Program Files\nodejs\;D:\Program Files\Microsoft VS Code\bin;D:\Program Files\Python\Scripts\;D:\Program Files\Python\;C:\Users\简二娃\AppData\Local\Programs\Python\Python37\Scripts\;C:\Users\简二娃\AppData\Local\Programs\Python\Python37\;C:\Program Files (x86)\Microsoft Visual Studio\Common\Tools\WinNT;C:\Program Files (x86)\Microsoft Visual Studio\Common\MSDev98\Bin;C:\Program Files (x86)\Microsoft Visual Studio\Common\Tools;C:\Program Files (x86)\Microsoft Visual Studio\VC98\bin;D:\new_workspace_c\emgucv-windesktop 3.3.0.2824\bin;C:\Users\简二娃\AppData\Roaming\npm;D:\Java工具\eclipse;;.]
+2019-03-13 10:39:34.640 |-INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [173] -| Initializing Spring embedded WebApplicationContext
+2019-03-13 10:39:34.640 |-INFO  [main] org.springframework.web.context.ContextLoader [285] -| Root WebApplicationContext: initialization completed in 2406 ms
+2019-03-13 10:39:34.722 |-INFO  [main] org.springframework.boot.web.servlet.ServletRegistrationBean [186] -| Servlet dispatcherServlet mapped to [/]
+2019-03-13 10:39:34.724 |-INFO  [main] org.springframework.boot.web.servlet.ServletRegistrationBean [186] -| Servlet statViewServlet mapped to [/druid/*]
+2019-03-13 10:39:34.732 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-03-13 10:39:34.733 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-03-13 10:39:34.733 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'formContentFilter' to: [/*]
+2019-03-13 10:39:34.734 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'requestContextFilter' to: [/*]
+2019-03-13 10:39:34.734 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [261] -| Mapping filter: 'webStatFilter' to urls: [/*]
+2019-03-13 10:39:34.856 |-INFO  [main] com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure [56] -| Init DruidDataSource
+2019-03-13 10:39:35.345 |-INFO  [main] com.alibaba.druid.pool.DruidDataSource [930] -| {dataSource-1} inited
+2019-03-13 10:39:36.120 |-INFO  [main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor [171] -| Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-13 10:39:36.791 |-INFO  [main] org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler [171] -| Initializing ExecutorService 'taskScheduler'
+2019-03-13 10:39:36.942 |-INFO  [main] net.devh.boot.grpc.server.serverfactory.AbstractGrpcServerFactory [114] -| Registered gRPC service: JdSystem.ClientAuthService, bean: clientServiceImpl, class: com.jian.grpc.ClientServiceImpl
+2019-03-13 10:39:36.950 |-INFO  [main] net.devh.boot.grpc.server.serverfactory.AbstractGrpcServerFactory [114] -| Registered gRPC service: JdSystem.PersonInfoAuthService, bean: personInfoServiceImpl, class: com.jian.grpc.PersonInfoServiceImpl
+2019-03-13 10:39:37.633 |-INFO  [main] net.devh.boot.grpc.server.serverfactory.GrpcServerLifecycle [91] -| gRPC Server started, listening on address: *, port: 50051
+2019-03-13 10:39:37.648 |-INFO  [main] org.apache.coyote.http11.Http11NioProtocol [173] -| Starting ProtocolHandler ["http-nio-8080"]
+2019-03-13 10:39:37.652 |-INFO  [main] org.apache.tomcat.util.net.NioSelectorPool [173] -| Using a shared selector for servlet write/read
+2019-03-13 10:39:37.678 |-INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [204] -| Tomcat started on port(s): 8080 (http) with context path ''
+2019-03-13 10:39:37.685 |-INFO  [main] com.jian.Application [59] -| Started Application in 6.123 seconds (JVM running for 9.395)
+2019-03-13 10:39:49.197 |-INFO  [http-nio-8080-exec-2] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [173] -| Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-13 10:39:49.197 |-INFO  [http-nio-8080-exec-2] org.springframework.web.servlet.DispatcherServlet [521] -| Initializing Servlet 'dispatcherServlet'
+2019-03-13 10:39:49.210 |-INFO  [http-nio-8080-exec-2] org.springframework.web.servlet.DispatcherServlet [543] -| Completed initialization in 12 ms
+2019-03-13 10:41:16.856 |-INFO  [main] com.jian.Application [50] -| Starting Application on jianlinwei with PID 13324 (D:\new_workspace\jd_parent\jd_web\target\classes started by jianlinwei in D:\new_workspace\jd_parent\jd_web)
+2019-03-13 10:41:16.866 |-INFO  [main] com.jian.Application [675] -| No active profile set, falling back to default profiles: default
+2019-03-13 10:41:18.998 |-INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [90] -| Tomcat initialized with port(s): 8080 (http)
+2019-03-13 10:41:19.012 |-INFO  [main] org.apache.coyote.http11.Http11NioProtocol [173] -| Initializing ProtocolHandler ["http-nio-8080"]
+2019-03-13 10:41:19.020 |-INFO  [main] org.apache.catalina.core.StandardService [173] -| Starting service [Tomcat]
+2019-03-13 10:41:19.020 |-INFO  [main] org.apache.catalina.core.StandardEngine [173] -| Starting Servlet Engine: Apache Tomcat/9.0.12
+2019-03-13 10:41:19.031 |-INFO  [main] org.apache.catalina.core.AprLifecycleListener [173] -| The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_181\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_181/bin/server;C:/Program Files/Java/jre1.8.0_181/bin;C:/Program Files/Java/jre1.8.0_181/lib/amd64;C:\Program Files (x86)\NetSarang\Xshell 6\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk1.8.0_181\jre\bin;D:\Program Files (x86)\Inno Setup 5;C:\Windows\system32;C:\Windows;C:\Windows\system32\wbem;C:\Program Files\nodejs\;D:\Program Files\Microsoft VS Code\bin;D:\Program Files\Python\Scripts\;D:\Program Files\Python\;C:\Users\简二娃\AppData\Local\Programs\Python\Python37\Scripts\;C:\Users\简二娃\AppData\Local\Programs\Python\Python37\;C:\Program Files (x86)\Microsoft Visual Studio\Common\Tools\WinNT;C:\Program Files (x86)\Microsoft Visual Studio\Common\MSDev98\Bin;C:\Program Files (x86)\Microsoft Visual Studio\Common\Tools;C:\Program Files (x86)\Microsoft Visual Studio\VC98\bin;D:\new_workspace_c\emgucv-windesktop 3.3.0.2824\bin;C:\Users\简二娃\AppData\Roaming\npm;D:\Java工具\eclipse;;.]
+2019-03-13 10:41:19.244 |-INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [173] -| Initializing Spring embedded WebApplicationContext
+2019-03-13 10:41:19.245 |-INFO  [main] org.springframework.web.context.ContextLoader [285] -| Root WebApplicationContext: initialization completed in 2300 ms
+2019-03-13 10:41:19.311 |-INFO  [main] org.springframework.boot.web.servlet.ServletRegistrationBean [186] -| Servlet dispatcherServlet mapped to [/]
+2019-03-13 10:41:19.314 |-INFO  [main] org.springframework.boot.web.servlet.ServletRegistrationBean [186] -| Servlet statViewServlet mapped to [/druid/*]
+2019-03-13 10:41:19.322 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-03-13 10:41:19.323 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-03-13 10:41:19.323 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'formContentFilter' to: [/*]
+2019-03-13 10:41:19.323 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'requestContextFilter' to: [/*]
+2019-03-13 10:41:19.325 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [261] -| Mapping filter: 'webStatFilter' to urls: [/*]
+2019-03-13 10:41:19.426 |-INFO  [main] com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure [56] -| Init DruidDataSource
+2019-03-13 10:41:19.925 |-INFO  [main] com.alibaba.druid.pool.DruidDataSource [930] -| {dataSource-1} inited
+2019-03-13 10:41:20.673 |-INFO  [main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor [171] -| Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-13 10:41:21.328 |-INFO  [main] org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler [171] -| Initializing ExecutorService 'taskScheduler'
+2019-03-13 10:41:21.498 |-INFO  [main] net.devh.boot.grpc.server.serverfactory.AbstractGrpcServerFactory [114] -| Registered gRPC service: JdSystem.ClientAuthService, bean: clientServiceImpl, class: com.jian.grpc.ClientServiceImpl
+2019-03-13 10:41:21.508 |-INFO  [main] net.devh.boot.grpc.server.serverfactory.AbstractGrpcServerFactory [114] -| Registered gRPC service: JdSystem.PersonInfoAuthService, bean: personInfoServiceImpl, class: com.jian.grpc.PersonInfoServiceImpl
+2019-03-13 10:41:22.257 |-INFO  [main] net.devh.boot.grpc.server.serverfactory.GrpcServerLifecycle [91] -| gRPC Server started, listening on address: *, port: 50051
+2019-03-13 10:41:22.274 |-INFO  [main] org.apache.coyote.http11.Http11NioProtocol [173] -| Starting ProtocolHandler ["http-nio-8080"]
+2019-03-13 10:41:22.277 |-INFO  [main] org.apache.tomcat.util.net.NioSelectorPool [173] -| Using a shared selector for servlet write/read
+2019-03-13 10:41:22.308 |-INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [204] -| Tomcat started on port(s): 8080 (http) with context path ''
+2019-03-13 10:41:22.320 |-INFO  [main] com.jian.Application [59] -| Started Application in 6.016 seconds (JVM running for 9.176)
+2019-03-13 10:41:26.334 |-INFO  [http-nio-8080-exec-2] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [173] -| Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-13 10:41:26.335 |-INFO  [http-nio-8080-exec-2] org.springframework.web.servlet.DispatcherServlet [521] -| Initializing Servlet 'dispatcherServlet'
+2019-03-13 10:41:26.345 |-INFO  [http-nio-8080-exec-2] org.springframework.web.servlet.DispatcherServlet [543] -| Completed initialization in 10 ms
+2019-03-13 10:42:05.574 |-INFO  [main] com.jian.Application [50] -| Starting Application on jianlinwei with PID 12028 (D:\new_workspace\jd_parent\jd_web\target\classes started by jianlinwei in D:\new_workspace\jd_parent\jd_web)
+2019-03-13 10:42:05.609 |-INFO  [main] com.jian.Application [675] -| No active profile set, falling back to default profiles: default
+2019-03-13 10:42:07.786 |-INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [90] -| Tomcat initialized with port(s): 8080 (http)
+2019-03-13 10:42:07.805 |-INFO  [main] org.apache.coyote.http11.Http11NioProtocol [173] -| Initializing ProtocolHandler ["http-nio-8080"]
+2019-03-13 10:42:07.815 |-INFO  [main] org.apache.catalina.core.StandardService [173] -| Starting service [Tomcat]
+2019-03-13 10:42:07.816 |-INFO  [main] org.apache.catalina.core.StandardEngine [173] -| Starting Servlet Engine: Apache Tomcat/9.0.12
+2019-03-13 10:42:07.830 |-INFO  [main] org.apache.catalina.core.AprLifecycleListener [173] -| The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_181\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_181/bin/server;C:/Program Files/Java/jre1.8.0_181/bin;C:/Program Files/Java/jre1.8.0_181/lib/amd64;C:\Program Files (x86)\NetSarang\Xshell 6\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk1.8.0_181\jre\bin;D:\Program Files (x86)\Inno Setup 5;C:\Windows\system32;C:\Windows;C:\Windows\system32\wbem;C:\Program Files\nodejs\;D:\Program Files\Microsoft VS Code\bin;D:\Program Files\Python\Scripts\;D:\Program Files\Python\;C:\Users\简二娃\AppData\Local\Programs\Python\Python37\Scripts\;C:\Users\简二娃\AppData\Local\Programs\Python\Python37\;C:\Program Files (x86)\Microsoft Visual Studio\Common\Tools\WinNT;C:\Program Files (x86)\Microsoft Visual Studio\Common\MSDev98\Bin;C:\Program Files (x86)\Microsoft Visual Studio\Common\Tools;C:\Program Files (x86)\Microsoft Visual Studio\VC98\bin;D:\new_workspace_c\emgucv-windesktop 3.3.0.2824\bin;C:\Users\简二娃\AppData\Roaming\npm;D:\Java工具\eclipse;;.]
+2019-03-13 10:42:08.035 |-INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [173] -| Initializing Spring embedded WebApplicationContext
+2019-03-13 10:42:08.035 |-INFO  [main] org.springframework.web.context.ContextLoader [285] -| Root WebApplicationContext: initialization completed in 2345 ms
+2019-03-13 10:42:08.103 |-INFO  [main] org.springframework.boot.web.servlet.ServletRegistrationBean [186] -| Servlet dispatcherServlet mapped to [/]
+2019-03-13 10:42:08.106 |-INFO  [main] org.springframework.boot.web.servlet.ServletRegistrationBean [186] -| Servlet statViewServlet mapped to [/druid/*]
+2019-03-13 10:42:08.115 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-03-13 10:42:08.116 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-03-13 10:42:08.117 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'formContentFilter' to: [/*]
+2019-03-13 10:42:08.117 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'requestContextFilter' to: [/*]
+2019-03-13 10:42:08.118 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [261] -| Mapping filter: 'webStatFilter' to urls: [/*]
+2019-03-13 10:42:08.206 |-INFO  [main] com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure [56] -| Init DruidDataSource
+2019-03-13 10:42:08.690 |-INFO  [main] com.alibaba.druid.pool.DruidDataSource [930] -| {dataSource-1} inited
+2019-03-13 10:42:09.378 |-INFO  [main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor [171] -| Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-13 10:42:09.986 |-INFO  [main] org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler [171] -| Initializing ExecutorService 'taskScheduler'
+2019-03-13 10:42:10.134 |-INFO  [main] net.devh.boot.grpc.server.serverfactory.AbstractGrpcServerFactory [114] -| Registered gRPC service: JdSystem.ClientAuthService, bean: clientServiceImpl, class: com.jian.grpc.ClientServiceImpl
+2019-03-13 10:42:10.140 |-INFO  [main] net.devh.boot.grpc.server.serverfactory.AbstractGrpcServerFactory [114] -| Registered gRPC service: JdSystem.PersonInfoAuthService, bean: personInfoServiceImpl, class: com.jian.grpc.PersonInfoServiceImpl
+2019-03-13 10:42:10.748 |-INFO  [main] net.devh.boot.grpc.server.serverfactory.GrpcServerLifecycle [91] -| gRPC Server started, listening on address: *, port: 50051
+2019-03-13 10:42:10.763 |-INFO  [main] org.apache.coyote.http11.Http11NioProtocol [173] -| Starting ProtocolHandler ["http-nio-8080"]
+2019-03-13 10:42:10.765 |-INFO  [main] org.apache.tomcat.util.net.NioSelectorPool [173] -| Using a shared selector for servlet write/read
+2019-03-13 10:42:10.783 |-INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [204] -| Tomcat started on port(s): 8080 (http) with context path ''
+2019-03-13 10:42:10.787 |-INFO  [main] com.jian.Application [59] -| Started Application in 5.806 seconds (JVM running for 8.972)
+2019-03-13 10:42:15.633 |-INFO  [http-nio-8080-exec-2] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [173] -| Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-13 10:42:15.633 |-INFO  [http-nio-8080-exec-2] org.springframework.web.servlet.DispatcherServlet [521] -| Initializing Servlet 'dispatcherServlet'
+2019-03-13 10:42:15.649 |-INFO  [http-nio-8080-exec-2] org.springframework.web.servlet.DispatcherServlet [543] -| Completed initialization in 16 ms

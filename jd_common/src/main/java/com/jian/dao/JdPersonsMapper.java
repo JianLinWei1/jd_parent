@@ -11,7 +11,7 @@ public interface JdPersonsMapper {
 
     int deleteByExample(JdPersonsExample example);
 
-    int deleteByPrimaryKey(String idCard);
+    int deleteByPrimaryKey(String uuid);
 
     int insert(JdPersons record);
 
@@ -25,7 +25,7 @@ public interface JdPersonsMapper {
 
     List<JdPersons> selectByExample(JdPersonsExample example);
 
-    JdPersons selectByPrimaryKey(String idCard);
+    JdPersons selectByPrimaryKey(String uuid);
 
     int updateByExampleSelective(@Param("record") JdPersons record, @Param("example") JdPersonsExample example);
 

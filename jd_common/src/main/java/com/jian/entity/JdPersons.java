@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class JdPersons implements Serializable {
+    private String uuid;
+
     private String idCard;
 
     private String name;
@@ -25,6 +27,14 @@ public class JdPersons implements Serializable {
     private String old_idCard;
 
     private static final long serialVersionUID = 1L;
+
+    public String getUuid() {
+        return uuid;
+    }
+
+    public void setUuid(String uuid) {
+        this.uuid = uuid == null ? null : uuid.trim();
+    }
 
     public String getIdCard() {
         return idCard;

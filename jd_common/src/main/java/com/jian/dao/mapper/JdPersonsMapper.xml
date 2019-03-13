@@ -2,7 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.jian.dao.JdPersonsMapper">
   <resultMap id="BaseResultMap" type="com.jian.entity.JdPersons">
-    <id column="id_card" jdbcType="VARCHAR" property="idCard" />
+    <id column="uuid" jdbcType="VARCHAR" property="uuid" />
+    <result column="id_card" jdbcType="VARCHAR" property="idCard" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="photo" jdbcType="VARCHAR" property="photo" />
     <result column="version" jdbcType="BIGINT" property="version" />
@@ -73,7 +74,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id_card, name, photo, version, action, device_seril, reg_time, invalid_time
+    uuid, id_card, name, photo, version, action, device_seril, reg_time, invalid_time
   </sql>
   <sql id="Blob_Column_List">
     photo_feature
@@ -114,11 +115,11 @@
     ,
     <include refid="Blob_Column_List" />
     from jd_persons
-    where id_card = #{idCard,jdbcType=VARCHAR}
+    where uuid = #{uuid,jdbcType=VARCHAR}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     delete from jd_persons
-    where id_card = #{idCard,jdbcType=VARCHAR}
+    where uuid = #{uuid,jdbcType=VARCHAR}
   </delete>
   <delete id="deleteByExample" parameterType="com.jian.entity.JdPersonsExample">
     delete from jd_persons
@@ -127,18 +128,21 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.jian.entity.JdPersons">
-    insert into jd_persons (id_card, name, photo, 
-      version, action, device_seril, 
-      reg_time, invalid_time, photo_feature
-      )
-    values (#{idCard,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{photo,jdbcType=VARCHAR}, 
-      #{version,jdbcType=BIGINT}, #{action,jdbcType=INTEGER}, #{deviceSeril,jdbcType=VARCHAR}, 
-      #{regTime,jdbcType=TIMESTAMP}, #{invalidTime,jdbcType=TIMESTAMP}, #{photoFeature,jdbcType=LONGVARBINARY}
-      )
+    insert into jd_persons (uuid, id_card, name, 
+      photo, version, action, 
+      device_seril, reg_time, invalid_time, 
+      photo_feature)
+    values (#{uuid,jdbcType=VARCHAR}, #{idCard,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
+      #{photo,jdbcType=VARCHAR}, #{version,jdbcType=BIGINT}, #{action,jdbcType=INTEGER}, 
+      #{deviceSeril,jdbcType=VARCHAR}, #{regTime,jdbcType=TIMESTAMP}, #{invalidTime,jdbcType=TIMESTAMP}, 
+      #{photoFeature,jdbcType=LONGVARBINARY})
   </insert>
   <insert id="insertSelective" parameterType="com.jian.entity.JdPersons">
     insert into jd_persons
     <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="uuid != null">
+        uuid,
+      </if>
       <if test="idCard != null">
         id_card,
       </if>
@@ -168,6 +172,9 @@
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="uuid != null">
+        #{uuid,jdbcType=VARCHAR},
+      </if>
       <if test="idCard != null">
         #{idCard,jdbcType=VARCHAR},
       </if>
@@ -206,6 +213,9 @@
   <update id="updateByExampleSelective" parameterType="map">
     update jd_persons
     <set>
+      <if test="record.uuid != null">
+        uuid = #{record.uuid,jdbcType=VARCHAR},
+      </if>
       <if test="record.idCard != null">
         id_card = #{record.idCard,jdbcType=VARCHAR},
       </if>
@@ -240,7 +250,8 @@
   </update>
   <update id="updateByExampleWithBLOBs" parameterType="map">
     update jd_persons
-    set id_card = #{record.idCard,jdbcType=VARCHAR},
+    set uuid = #{record.uuid,jdbcType=VARCHAR},
+      id_card = #{record.idCard,jdbcType=VARCHAR},
       name = #{record.name,jdbcType=VARCHAR},
       photo = #{record.photo,jdbcType=VARCHAR},
       version = #{record.version,jdbcType=BIGINT},
@@ -255,7 +266,8 @@
   </update>
   <update id="updateByExample" parameterType="map">
     update jd_persons
-    set id_card = #{record.idCard,jdbcType=VARCHAR},
+    set uuid = #{record.uuid,jdbcType=VARCHAR},
+      id_card = #{record.idCard,jdbcType=VARCHAR},
       name = #{record.name,jdbcType=VARCHAR},
       photo = #{record.photo,jdbcType=VARCHAR},
       version = #{record.version,jdbcType=BIGINT},
@@ -270,6 +282,9 @@
   <update id="updateByPrimaryKeySelective" parameterType="com.jian.entity.JdPersons">
     update jd_persons
     <set>
+      <if test="idCard != null">
+        id_card = #{idCard,jdbcType=VARCHAR},
+      </if>
       <if test="name != null">
         name = #{name,jdbcType=VARCHAR},
       </if>
@@ -295,11 +310,12 @@
         photo_feature = #{photoFeature,jdbcType=LONGVARBINARY},
       </if>
     </set>
-    where id_card = #{idCard,jdbcType=VARCHAR}
+    where uuid = #{uuid,jdbcType=VARCHAR}
   </update>
   <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.jian.entity.JdPersons">
     update jd_persons
-    set name = #{name,jdbcType=VARCHAR},
+    set id_card = #{idCard,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
       photo = #{photo,jdbcType=VARCHAR},
       version = #{version,jdbcType=BIGINT},
       action = #{action,jdbcType=INTEGER},
@@ -307,18 +323,19 @@
       reg_time = #{regTime,jdbcType=TIMESTAMP},
       invalid_time = #{invalidTime,jdbcType=TIMESTAMP},
       photo_feature = #{photoFeature,jdbcType=LONGVARBINARY}
-    where id_card = #{idCard,jdbcType=VARCHAR}
+    where uuid = #{uuid,jdbcType=VARCHAR}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.jian.entity.JdPersons">
     update jd_persons
-    set name = #{name,jdbcType=VARCHAR},
+    set id_card = #{idCard,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
       photo = #{photo,jdbcType=VARCHAR},
       version = #{version,jdbcType=BIGINT},
       action = #{action,jdbcType=INTEGER},
       device_seril = #{deviceSeril,jdbcType=VARCHAR},
       reg_time = #{regTime,jdbcType=TIMESTAMP},
       invalid_time = #{invalidTime,jdbcType=TIMESTAMP}
-    where id_card = #{idCard,jdbcType=VARCHAR}
+    where uuid = #{uuid,jdbcType=VARCHAR}
   </update>
   <select id="selectByExampleWithBLOBsWithRowbounds" parameterType="com.jian.entity.JdPersonsExample" resultMap="ResultMapWithBLOBs">
     select

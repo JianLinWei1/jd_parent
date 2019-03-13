@@ -35,7 +35,7 @@ public class ScheduledUtil {
 	    	  j.setAction(ActionUtil.delete.getCode());
 	    	  j.setVersion(System.currentTimeMillis());
 	    	  jdpersonMapper.updateByPrimaryKeySelective(j);
-	    	  logger.info("定时清理过期人脸",JSON.toJSONString(j));
+	    	  logger.info("定时清理过期人脸:"+JSON.toJSONString(j));
 		}
 		
 	}

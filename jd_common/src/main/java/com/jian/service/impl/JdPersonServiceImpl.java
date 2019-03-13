@@ -20,6 +20,7 @@ import com.jian.util.ActionUtil;
 import com.jian.util.FaceUtil;
 import com.jian.util.FileUtil;
 import com.jian.util.ResultUtil;
+import com.jian.util.UuidUtil;
 
 @Service
 public class JdPersonServiceImpl  implements  JdPersonService {
@@ -38,12 +39,18 @@ public class JdPersonServiceImpl  implements  JdPersonService {
 		int  count = 0;
 		for (JdPersons lp : jdPersons) {
 			try {
-				if(StringUtils.isNotEmpty(lp.getIdCard())
-						&&ljPersonMapper.selectByPrimaryKey(lp.getIdCard()) != null){
-					face_msg ="已存在";
-					lp.setPhoto("");
-					resultUtil.setData(JSON.toJSON(lp).toString());
-					break;
+				lp.setUuid(UuidUtil.getUUID());
+				JdPersonsExample example = new JdPersonsExample();
+				Criteria criteria  = example.createCriteria();
+				criteria.andActionNotEqualTo(ActionUtil.delete.getCode());
+				criteria.andDeviceSerilEqualTo(lp.getDeviceSeril());
+				criteria.andIdCardEqualTo(lp.getIdCard());
+				List<JdPersons>  lp_2  = ljPersonMapper.selectByExample(example);
+				if(lp_2.size() > 0 ){
+						face_msg ="已存在";
+						lp.setPhoto("");
+						resultUtil.setData(JSON.toJSON(lp).toString());
+						break;
 				}
 				
 				if(ljDeviceMapper.selectByPrimaryKey(lp.getDeviceSeril()) == null){
@@ -69,9 +76,8 @@ public class JdPersonServiceImpl  implements  JdPersonService {
 					face_msg = "500,存入图片异常";
 					break;
 				}
-					
-				count +=ljPersonMapper.insert(lp);
-
+				
+					count +=ljPersonMapper.insert(lp);
 			} catch (IllegalArgumentException e) {
 				face_msg = "base64解码错误";
 				resultUtil.setData(JSON.toJSON(lp).toString());
@@ -103,6 +109,24 @@ public class JdPersonServiceImpl  implements  JdPersonService {
 		int  count = 0;
 		for (JdPersons lp : jdPersons) {
 			try {
+				JdPersonsExample example = new JdPersonsExample();
+				Criteria criteria  = example.createCriteria();
+				criteria.andActionNotEqualTo(ActionUtil.delete.getCode());
+				if(StringUtils.isNotEmpty(lp.getOld_idCard()))
+					criteria.andIdCardEqualTo(lp.getOld_idCard());
+				else
+					criteria.andIdCardEqualTo(lp.getIdCard());
+				criteria.andDeviceSerilEqualTo(lp.getDeviceSeril());
+				
+				List<JdPersons>  jdPersons2  = ljPersonMapper.selectByExampleWithBLOBs(example);
+				if(jdPersons2.size() <= 0){
+					face_msg ="不存在";
+					lp.setPhoto("");
+					resultUtil.setData(JSON.toJSON(lp).toString());
+					break;
+				}
+				
+				/*
 				if((StringUtils.isNotEmpty(lp.getOld_idCard())
 						&&ljPersonMapper.selectByPrimaryKey(lp.getOld_idCard()) == null) 
 						&& ljPersonMapper.selectByPrimaryKey(lp.getIdCard()) == null){
@@ -117,32 +141,36 @@ public class JdPersonServiceImpl  implements  JdPersonService {
 					lp.setPhoto("");
 					resultUtil.setData(JSON.toJSON(lp).toString());
 					break;
-				}
-				byte[] bs = FileUtil.Base642Byte(lp.getPhoto());
-				if (bs != null)
-					face_msg = FaceUtil.DetectFace(bs);
-				if(StringUtils.isNotEmpty(face_msg)){
-					resultUtil.setData(JSON.toJSON(lp).toString());
-					break;
-				}
-				lp.setPhoto(FileUtil.addPicture2Midkirs(bs, lp.getIdCard() ,"upload/images/"));
-				lp.setPhotoFeature(FaceUtil.getFeature(bs));
-				lp.setAction(ActionUtil.update.getCode());
-				lp.setVersion(System.currentTimeMillis());
-				if(StringUtils.isEmpty(lp.getPhoto())){
-					resultUtil.setData(lp);
-					face_msg = "500,存入图片异常";
-					break;
-				}
-				if(StringUtils.isNotEmpty(lp.getOld_idCard())){
-					JdPersonsExample example = new JdPersonsExample();
-					Criteria criteria = example.createCriteria();
-					criteria.andIdCardEqualTo(lp.getOld_idCard());
-					count +=ljPersonMapper.updateByExampleWithBLOBs(lp, example);
+				}*/
+              
+                	byte[] bs = FileUtil.Base642Byte(lp.getPhoto());
+    				if (bs != null)
+    					face_msg = FaceUtil.DetectFace(bs);
+    				if(StringUtils.isNotEmpty(face_msg)){
+    					resultUtil.setData(JSON.toJSON(lp).toString());
+    					break;
+    				}
+    				lp.setPhoto(FileUtil.addPicture2Midkirs(bs, lp.getIdCard() ,"upload/images/"));
+    				lp.setPhotoFeature(FaceUtil.getFeature(bs));
+    				lp.setAction(ActionUtil.update.getCode());
+    				lp.setVersion(System.currentTimeMillis());
+    				if(StringUtils.isEmpty(lp.getPhoto())){
+    					resultUtil.setData(lp);
+    					face_msg = "500,存入图片异常";
+    					break;
+    				}
+				
+				
+				/*if(StringUtils.isNotEmpty(lp.getOld_idCard())){
+					JdPersonsExample example2 = new JdPersonsExample();
+					Criteria criteria2 = example.createCriteria();
+					criteria2.andIdCardEqualTo(lp.getOld_idCard());
+					count +=ljPersonMapper.updateByExampleWithBLOBs(lp, example2);
 				}else{
 				count +=ljPersonMapper.updateByPrimaryKeyWithBLOBs(lp);
-				}
+				}*/
 
+    				count += ljPersonMapper.updateByExampleSelective(lp, example);
 			} catch (IllegalArgumentException e) {
 				face_msg = "base64解码错误";
 				resultUtil.setData(JSON.toJSON(lp).toString());
@@ -173,17 +201,23 @@ public class JdPersonServiceImpl  implements  JdPersonService {
 	      String msg = null;
 	      int count =0 ;
 	      for(JdPersons  lp : jdPersons){
-	    	  if(StringUtils.isNotEmpty(lp.getIdCard())
-						&& ljPersonMapper.selectByPrimaryKey(lp.getIdCard()) == null){
-	    		  msg ="不存在";
+	    	  JdPersonsExample example = new JdPersonsExample();
+				Criteria criteria  = example.createCriteria();
+				criteria.andActionNotEqualTo(ActionUtil.delete.getCode());
+				criteria.andIdCardEqualTo(lp.getIdCard());
+				criteria.andDeviceSerilEqualTo(lp.getDeviceSeril());
+				
+				List<JdPersons>  jdPersons2  = ljPersonMapper.selectByExampleWithBLOBs(example);
+				if(jdPersons2.size() <= 0){
+					msg ="不存在";
 					lp.setPhoto("");
 					resultUtil.setData(JSON.toJSON(lp).toString());
 					break;
-	    	  }
+				}
 	    	  lp.setPhoto(null);
 	    	  lp.setAction(ActionUtil.delete.getCode());
 	    	  lp.setVersion(System.currentTimeMillis());
-	    	  count+= ljPersonMapper.updateByPrimaryKeySelective(lp);
+	    	  count+= ljPersonMapper.updateByExampleSelective(lp, example);
 	      }
 	      
 	      if (StringUtils.isNotEmpty(msg)) {
