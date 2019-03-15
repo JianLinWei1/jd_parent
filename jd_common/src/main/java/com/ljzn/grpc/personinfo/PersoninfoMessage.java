@@ -27,6 +27,8 @@ private static final long serialVersionUID = 0L;
     photo_ = com.google.protobuf.ByteString.EMPTY;
     version_ = 0L;
     action_ = 0;
+    personType_ = 0;
+    uuid_ = "";
   }
 
   @java.lang.Override
@@ -111,6 +113,18 @@ private static final long serialVersionUID = 0L;
           case 64: {
 
             action_ = input.readInt32();
+            break;
+          }
+          case 72: {
+            int rawValue = input.readEnum();
+
+            personType_ = rawValue;
+            break;
+          }
+          case 82: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            uuid_ = s;
             break;
           }
         }
@@ -308,6 +322,64 @@ private static final long serialVersionUID = 0L;
     return action_;
   }
 
+  public static final int PERSONTYPE_FIELD_NUMBER = 9;
+  private int personType_;
+  /**
+   * <pre>
+   *人员类型
+   * </pre>
+   *
+   * <code>.JdSystem.PersonType personType = 9;</code>
+   */
+  public int getPersonTypeValue() {
+    return personType_;
+  }
+  /**
+   * <pre>
+   *人员类型
+   * </pre>
+   *
+   * <code>.JdSystem.PersonType personType = 9;</code>
+   */
+  public com.ljzn.grpc.personinfo.PersonType getPersonType() {
+    com.ljzn.grpc.personinfo.PersonType result = com.ljzn.grpc.personinfo.PersonType.valueOf(personType_);
+    return result == null ? com.ljzn.grpc.personinfo.PersonType.UNRECOGNIZED : result;
+  }
+
+  public static final int UUID_FIELD_NUMBER = 10;
+  private volatile java.lang.Object uuid_;
+  /**
+   * <code>string uuid = 10;</code>
+   */
+  public java.lang.String getUuid() {
+    java.lang.Object ref = uuid_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      uuid_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string uuid = 10;</code>
+   */
+  public com.google.protobuf.ByteString
+      getUuidBytes() {
+    java.lang.Object ref = uuid_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      uuid_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   public final boolean isInitialized() {
     byte isInitialized = memoizedIsInitialized;
@@ -345,6 +417,12 @@ private static final long serialVersionUID = 0L;
     }
     if (action_ != 0) {
       output.writeInt32(8, action_);
+    }
+    if (personType_ != com.ljzn.grpc.personinfo.PersonType.Learner.getNumber()) {
+      output.writeEnum(9, personType_);
+    }
+    if (!getUuidBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 10, uuid_);
     }
     unknownFields.writeTo(output);
   }
@@ -387,6 +465,13 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(8, action_);
     }
+    if (personType_ != com.ljzn.grpc.personinfo.PersonType.Learner.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(9, personType_);
+    }
+    if (!getUuidBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, uuid_);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -417,6 +502,9 @@ private static final long serialVersionUID = 0L;
         == other.getVersion());
     result = result && (getAction()
         == other.getAction());
+    result = result && personType_ == other.personType_;
+    result = result && getUuid()
+        .equals(other.getUuid());
     result = result && unknownFields.equals(other.unknownFields);
     return result;
   }
@@ -446,6 +534,10 @@ private static final long serialVersionUID = 0L;
         getVersion());
     hash = (37 * hash) + ACTION_FIELD_NUMBER;
     hash = (53 * hash) + getAction();
+    hash = (37 * hash) + PERSONTYPE_FIELD_NUMBER;
+    hash = (53 * hash) + personType_;
+    hash = (37 * hash) + UUID_FIELD_NUMBER;
+    hash = (53 * hash) + getUuid().hashCode();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -593,6 +685,10 @@ private static final long serialVersionUID = 0L;
 
       action_ = 0;
 
+      personType_ = 0;
+
+      uuid_ = "";
+
       return this;
     }
 
@@ -628,6 +724,8 @@ private static final long serialVersionUID = 0L;
       result.photo_ = photo_;
       result.version_ = version_;
       result.action_ = action_;
+      result.personType_ = personType_;
+      result.uuid_ = uuid_;
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -699,6 +797,13 @@ private static final long serialVersionUID = 0L;
       }
       if (other.getAction() != 0) {
         setAction(other.getAction());
+      }
+      if (other.personType_ != 0) {
+        setPersonTypeValue(other.getPersonTypeValue());
+      }
+      if (!other.getUuid().isEmpty()) {
+        uuid_ = other.uuid_;
+        onChanged();
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1139,6 +1244,139 @@ private static final long serialVersionUID = 0L;
     public Builder clearAction() {
       
       action_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int personType_ = 0;
+    /**
+     * <pre>
+     *人员类型
+     * </pre>
+     *
+     * <code>.JdSystem.PersonType personType = 9;</code>
+     */
+    public int getPersonTypeValue() {
+      return personType_;
+    }
+    /**
+     * <pre>
+     *人员类型
+     * </pre>
+     *
+     * <code>.JdSystem.PersonType personType = 9;</code>
+     */
+    public Builder setPersonTypeValue(int value) {
+      personType_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *人员类型
+     * </pre>
+     *
+     * <code>.JdSystem.PersonType personType = 9;</code>
+     */
+    public com.ljzn.grpc.personinfo.PersonType getPersonType() {
+      com.ljzn.grpc.personinfo.PersonType result = com.ljzn.grpc.personinfo.PersonType.valueOf(personType_);
+      return result == null ? com.ljzn.grpc.personinfo.PersonType.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     *人员类型
+     * </pre>
+     *
+     * <code>.JdSystem.PersonType personType = 9;</code>
+     */
+    public Builder setPersonType(com.ljzn.grpc.personinfo.PersonType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      
+      personType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     *人员类型
+     * </pre>
+     *
+     * <code>.JdSystem.PersonType personType = 9;</code>
+     */
+    public Builder clearPersonType() {
+      
+      personType_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object uuid_ = "";
+    /**
+     * <code>string uuid = 10;</code>
+     */
+    public java.lang.String getUuid() {
+      java.lang.Object ref = uuid_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        uuid_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string uuid = 10;</code>
+     */
+    public com.google.protobuf.ByteString
+        getUuidBytes() {
+      java.lang.Object ref = uuid_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        uuid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string uuid = 10;</code>
+     */
+    public Builder setUuid(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      uuid_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string uuid = 10;</code>
+     */
+    public Builder clearUuid() {
+      
+      uuid_ = getDefaultInstance().getUuid();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string uuid = 10;</code>
+     */
+    public Builder setUuidBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      uuid_ = value;
       onChanged();
       return this;
     }

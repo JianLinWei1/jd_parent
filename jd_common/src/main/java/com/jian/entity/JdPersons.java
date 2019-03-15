@@ -22,6 +22,8 @@ public class JdPersons implements Serializable {
 
     private Date invalidTime;
 
+    private Integer personType;
+
     private byte[] photoFeature;
     
     private String old_idCard;
@@ -98,6 +100,14 @@ public class JdPersons implements Serializable {
 
     public void setInvalidTime(Date invalidTime) {
         this.invalidTime = invalidTime;
+    }
+
+    public Integer getPersonType() {
+        return personType;
+    }
+
+    public void setPersonType(Integer personType) {
+        this.personType = personType;
     }
 
     public byte[] getPhotoFeature() {

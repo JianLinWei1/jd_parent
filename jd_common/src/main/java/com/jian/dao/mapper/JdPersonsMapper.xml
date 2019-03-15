@@ -11,6 +11,7 @@
     <result column="device_seril" jdbcType="VARCHAR" property="deviceSeril" />
     <result column="reg_time" jdbcType="TIMESTAMP" property="regTime" />
     <result column="invalid_time" jdbcType="TIMESTAMP" property="invalidTime" />
+    <result column="person_type" jdbcType="INTEGER" property="personType" />
   </resultMap>
   <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.jian.entity.JdPersons">
     <result column="photo_feature" jdbcType="LONGVARBINARY" property="photoFeature" />
@@ -74,7 +75,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    uuid, id_card, name, photo, version, action, device_seril, reg_time, invalid_time
+    uuid, id_card, name, photo, version, action, device_seril, reg_time, invalid_time, 
+    person_type
   </sql>
   <sql id="Blob_Column_List">
     photo_feature
@@ -131,11 +133,11 @@
     insert into jd_persons (uuid, id_card, name, 
       photo, version, action, 
       device_seril, reg_time, invalid_time, 
-      photo_feature)
+      person_type, photo_feature)
     values (#{uuid,jdbcType=VARCHAR}, #{idCard,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
       #{photo,jdbcType=VARCHAR}, #{version,jdbcType=BIGINT}, #{action,jdbcType=INTEGER}, 
       #{deviceSeril,jdbcType=VARCHAR}, #{regTime,jdbcType=TIMESTAMP}, #{invalidTime,jdbcType=TIMESTAMP}, 
-      #{photoFeature,jdbcType=LONGVARBINARY})
+      #{personType,jdbcType=INTEGER}, #{photoFeature,jdbcType=LONGVARBINARY})
   </insert>
   <insert id="insertSelective" parameterType="com.jian.entity.JdPersons">
     insert into jd_persons
@@ -166,6 +168,9 @@
       </if>
       <if test="invalidTime != null">
         invalid_time,
+      </if>
+      <if test="personType != null">
+        person_type,
       </if>
       <if test="photoFeature != null">
         photo_feature,
@@ -198,6 +203,9 @@
       </if>
       <if test="invalidTime != null">
         #{invalidTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="personType != null">
+        #{personType,jdbcType=INTEGER},
       </if>
       <if test="photoFeature != null">
         #{photoFeature,jdbcType=LONGVARBINARY},
@@ -240,6 +248,9 @@
       <if test="record.invalidTime != null">
         invalid_time = #{record.invalidTime,jdbcType=TIMESTAMP},
       </if>
+      <if test="record.personType != null">
+        person_type = #{record.personType,jdbcType=INTEGER},
+      </if>
       <if test="record.photoFeature != null">
         photo_feature = #{record.photoFeature,jdbcType=LONGVARBINARY},
       </if>
@@ -259,6 +270,7 @@
       device_seril = #{record.deviceSeril,jdbcType=VARCHAR},
       reg_time = #{record.regTime,jdbcType=TIMESTAMP},
       invalid_time = #{record.invalidTime,jdbcType=TIMESTAMP},
+      person_type = #{record.personType,jdbcType=INTEGER},
       photo_feature = #{record.photoFeature,jdbcType=LONGVARBINARY}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
@@ -274,7 +286,8 @@
       action = #{record.action,jdbcType=INTEGER},
       device_seril = #{record.deviceSeril,jdbcType=VARCHAR},
       reg_time = #{record.regTime,jdbcType=TIMESTAMP},
-      invalid_time = #{record.invalidTime,jdbcType=TIMESTAMP}
+      invalid_time = #{record.invalidTime,jdbcType=TIMESTAMP},
+      person_type = #{record.personType,jdbcType=INTEGER}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -306,6 +319,9 @@
       <if test="invalidTime != null">
         invalid_time = #{invalidTime,jdbcType=TIMESTAMP},
       </if>
+      <if test="personType != null">
+        person_type = #{personType,jdbcType=INTEGER},
+      </if>
       <if test="photoFeature != null">
         photo_feature = #{photoFeature,jdbcType=LONGVARBINARY},
       </if>
@@ -322,6 +338,7 @@
       device_seril = #{deviceSeril,jdbcType=VARCHAR},
       reg_time = #{regTime,jdbcType=TIMESTAMP},
       invalid_time = #{invalidTime,jdbcType=TIMESTAMP},
+      person_type = #{personType,jdbcType=INTEGER},
       photo_feature = #{photoFeature,jdbcType=LONGVARBINARY}
     where uuid = #{uuid,jdbcType=VARCHAR}
   </update>
@@ -334,7 +351,8 @@
       action = #{action,jdbcType=INTEGER},
       device_seril = #{deviceSeril,jdbcType=VARCHAR},
       reg_time = #{regTime,jdbcType=TIMESTAMP},
-      invalid_time = #{invalidTime,jdbcType=TIMESTAMP}
+      invalid_time = #{invalidTime,jdbcType=TIMESTAMP},
+      person_type = #{personType,jdbcType=INTEGER}
     where uuid = #{uuid,jdbcType=VARCHAR}
   </update>
   <select id="selectByExampleWithBLOBsWithRowbounds" parameterType="com.jian.entity.JdPersonsExample" resultMap="ResultMapWithBLOBs">

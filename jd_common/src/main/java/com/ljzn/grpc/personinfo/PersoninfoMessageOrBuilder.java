@@ -99,4 +99,31 @@ public interface PersoninfoMessageOrBuilder extends
    * <code>int32 action = 8;</code>
    */
   int getAction();
+
+  /**
+   * <pre>
+   *人员类型
+   * </pre>
+   *
+   * <code>.JdSystem.PersonType personType = 9;</code>
+   */
+  int getPersonTypeValue();
+  /**
+   * <pre>
+   *人员类型
+   * </pre>
+   *
+   * <code>.JdSystem.PersonType personType = 9;</code>
+   */
+  com.ljzn.grpc.personinfo.PersonType getPersonType();
+
+  /**
+   * <code>string uuid = 10;</code>
+   */
+  java.lang.String getUuid();
+  /**
+   * <code>string uuid = 10;</code>
+   */
+  com.google.protobuf.ByteString
+      getUuidBytes();
 }

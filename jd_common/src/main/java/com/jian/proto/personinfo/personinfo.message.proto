@@ -6,6 +6,11 @@ option objc_class_prefix = "PERSONINFO";
 
 package JdSystem; 
 
+enum  PersonType{
+    Learner = 0 ; //学习人员
+    Leader = 1 ; //领导
+    Worker = 2 ; //工作人员
+}
 
    
 //人员基本信息
@@ -17,7 +22,8 @@ message  PersoninfoMessage{
   bytes  photo = 6 ; //照片（可选)
   int64  version = 7 ;
   int32  action = 8 ; //操作 -1删除  1 增加 2 更新
-  
+  PersonType  personType = 9 ; //人员类型
+  string  uuid = 10 ;
 }
 
 

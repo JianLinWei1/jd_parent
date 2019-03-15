@@ -29,12 +29,14 @@ public final class PersoninfoMessageOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n#personinfo/personinfo.message.proto\022\010J" +
-      "dSystem\"\220\001\n\021PersoninfoMessage\022\016\n\006cardId\030" +
+      "dSystem\"\310\001\n\021PersoninfoMessage\022\016\n\006cardId\030" +
       "\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\024\n\014photoFeature\030\004 \003(" +
       "\002\022\027\n\017photoFeatureLen\030\005 \001(\003\022\r\n\005photo\030\006 \001(" +
-      "\014\022\017\n\007version\030\007 \001(\003\022\016\n\006action\030\010 \001(\005B)\n\030co" +
-      "m.ljzn.grpc.personinfoP\001\242\002\nPERSONINFOb\006p" +
-      "roto3"
+      "\014\022\017\n\007version\030\007 \001(\003\022\016\n\006action\030\010 \001(\005\022(\n\npe" +
+      "rsonType\030\t \001(\0162\024.JdSystem.PersonType\022\014\n\004" +
+      "uuid\030\n \001(\t*1\n\nPersonType\022\013\n\007Learner\020\000\022\n\n" +
+      "\006Leader\020\001\022\n\n\006Worker\020\002B)\n\030com.ljzn.grpc.p" +
+      "ersoninfoP\001\242\002\nPERSONINFOb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -53,7 +55,7 @@ public final class PersoninfoMessageOuterClass {
     internal_static_JdSystem_PersoninfoMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_JdSystem_PersoninfoMessage_descriptor,
-        new java.lang.String[] { "CardId", "Name", "PhotoFeature", "PhotoFeatureLen", "Photo", "Version", "Action", });
+        new java.lang.String[] { "CardId", "Name", "PhotoFeature", "PhotoFeatureLen", "Photo", "Version", "Action", "PersonType", "Uuid", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

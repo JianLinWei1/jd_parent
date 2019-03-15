@@ -695,6 +695,66 @@ public class JdPersonsExample {
             return (Criteria) this;
         }
 
+        public Criteria andPersonTypeIsNull() {
+            addCriterion("person_type is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andPersonTypeIsNotNull() {
+            addCriterion("person_type is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andPersonTypeEqualTo(Integer value) {
+            addCriterion("person_type =", value, "personType");
+            return (Criteria) this;
+        }
+
+        public Criteria andPersonTypeNotEqualTo(Integer value) {
+            addCriterion("person_type <>", value, "personType");
+            return (Criteria) this;
+        }
+
+        public Criteria andPersonTypeGreaterThan(Integer value) {
+            addCriterion("person_type >", value, "personType");
+            return (Criteria) this;
+        }
+
+        public Criteria andPersonTypeGreaterThanOrEqualTo(Integer value) {
+            addCriterion("person_type >=", value, "personType");
+            return (Criteria) this;
+        }
+
+        public Criteria andPersonTypeLessThan(Integer value) {
+            addCriterion("person_type <", value, "personType");
+            return (Criteria) this;
+        }
+
+        public Criteria andPersonTypeLessThanOrEqualTo(Integer value) {
+            addCriterion("person_type <=", value, "personType");
+            return (Criteria) this;
+        }
+
+        public Criteria andPersonTypeIn(List<Integer> values) {
+            addCriterion("person_type in", values, "personType");
+            return (Criteria) this;
+        }
+
+        public Criteria andPersonTypeNotIn(List<Integer> values) {
+            addCriterion("person_type not in", values, "personType");
+            return (Criteria) this;
+        }
+
+        public Criteria andPersonTypeBetween(Integer value1, Integer value2) {
+            addCriterion("person_type between", value1, value2, "personType");
+            return (Criteria) this;
+        }
+
+        public Criteria andPersonTypeNotBetween(Integer value1, Integer value2) {
+            addCriterion("person_type not between", value1, value2, "personType");
+            return (Criteria) this;
+        }
+
         public Criteria andUuidLikeInsensitive(String value) {
             addCriterion("upper(uuid) like", value.toUpperCase(), "uuid");
             return (Criteria) this;

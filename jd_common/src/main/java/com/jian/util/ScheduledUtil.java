@@ -32,6 +32,7 @@ public class ScheduledUtil {
 		List<JdPersons>  persons = jdpersonMapper.selectByExample(example);
 		for(JdPersons j : persons ){
 			j.setPhoto(null);
+			
 	    	  j.setAction(ActionUtil.delete.getCode());
 	    	  j.setVersion(System.currentTimeMillis());
 	    	  jdpersonMapper.updateByPrimaryKeySelective(j);
@@ -39,4 +40,22 @@ public class ScheduledUtil {
 		}
 		
 	}
+	
+	@Scheduled(cron = "0 30 18 * * ? ")
+	public  void  delPeople(){
+		JdPersonsExample  example  = new JdPersonsExample();
+		Criteria criteria  = example.createCriteria();
+		criteria.andActionEqualTo(ActionUtil.delete.getCode());
+		
+		List<JdPersons>  persons = jdpersonMapper.selectByExample(example);
+		for(JdPersons j : persons ){
+			if((new Date().getTime() -j.getVersion()) > 1*60*60*1000 ){
+				jdpersonMapper.deleteByPrimaryKey(j.getUuid());
+				 logger.info("清理删除数据:"+JSON.toJSONString(j));
+			}
+	    	 
+		}
+		
+	}
+	
 }

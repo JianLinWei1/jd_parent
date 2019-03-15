@@ -54,6 +54,8 @@ public class PersonInfoServiceImpl  extends  PersonInfoAuthServiceImplBase{
 		    mBuilder.addAllPhotoFeature(floats);
 		    mBuilder.setPhotoFeatureLen(feature.len);
 		    mBuilder.setVersion(jp.getVersion());
+		    mBuilder.setPersonTypeValue(jp.getPersonType());
+		    mBuilder.setUuid(jp.getUuid());
 		    logger.info("获取人员cardid:"+mBuilder.getCardId()+":"+mBuilder.getName());
 		}
 		builder.setCode(1);
