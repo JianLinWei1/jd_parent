@@ -5081,3 +5081,99 @@ java.io.IOException: 远程主机强迫关闭了一个现有的连接。
 	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884) [netty-common-4.1.29.Final.jar:4.1.29.Final]
 	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.29.Final.jar:4.1.29.Final]
 	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_181]
+2019-03-15 13:39:50.663 |-INFO  [main] com.jian.Application [50] -| Starting Application on jianlinwei with PID 1020 (D:\new_workspace\jd_parent\jd_web\target\classes started by jianlinwei in D:\new_workspace\jd_parent\jd_web)
+2019-03-15 13:39:50.672 |-INFO  [main] com.jian.Application [675] -| No active profile set, falling back to default profiles: default
+2019-03-15 13:39:53.321 |-INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [90] -| Tomcat initialized with port(s): 8080 (http)
+2019-03-15 13:39:53.337 |-INFO  [main] org.apache.coyote.http11.Http11NioProtocol [173] -| Initializing ProtocolHandler ["http-nio-8080"]
+2019-03-15 13:39:53.347 |-INFO  [main] org.apache.catalina.core.StandardService [173] -| Starting service [Tomcat]
+2019-03-15 13:39:53.348 |-INFO  [main] org.apache.catalina.core.StandardEngine [173] -| Starting Servlet Engine: Apache Tomcat/9.0.12
+2019-03-15 13:39:53.362 |-INFO  [main] org.apache.catalina.core.AprLifecycleListener [173] -| The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_181\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_181/bin/server;C:/Program Files/Java/jre1.8.0_181/bin;C:/Program Files/Java/jre1.8.0_181/lib/amd64;C:\Program Files (x86)\NetSarang\Xshell 6\;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_181\bin;C:\Program Files\Java\jdk1.8.0_181\jre\bin;D:\Program Files (x86)\Inno Setup 5;C:\Windows\system32;C:\Windows;C:\Windows\system32\wbem;C:\Program Files\nodejs\;D:\Program Files\Microsoft VS Code\bin;D:\Program Files\Python\Scripts\;D:\Program Files\Python\;C:\Users\简二娃\AppData\Local\Programs\Python\Python37\Scripts\;C:\Users\简二娃\AppData\Local\Programs\Python\Python37\;C:\Program Files (x86)\Microsoft Visual Studio\Common\Tools\WinNT;C:\Program Files (x86)\Microsoft Visual Studio\Common\MSDev98\Bin;C:\Program Files (x86)\Microsoft Visual Studio\Common\Tools;C:\Program Files (x86)\Microsoft Visual Studio\VC98\bin;D:\new_workspace_c\emgucv-windesktop 3.3.0.2824\bin;C:\Users\简二娃\AppData\Roaming\npm;D:\Java工具\eclipse;;.]
+2019-03-15 13:39:53.601 |-INFO  [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [173] -| Initializing Spring embedded WebApplicationContext
+2019-03-15 13:39:53.602 |-INFO  [main] org.springframework.web.context.ContextLoader [285] -| Root WebApplicationContext: initialization completed in 2851 ms
+2019-03-15 13:39:53.685 |-INFO  [main] org.springframework.boot.web.servlet.ServletRegistrationBean [186] -| Servlet dispatcherServlet mapped to [/]
+2019-03-15 13:39:53.689 |-INFO  [main] org.springframework.boot.web.servlet.ServletRegistrationBean [186] -| Servlet statViewServlet mapped to [/druid/*]
+2019-03-15 13:39:53.695 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-03-15 13:39:53.696 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-03-15 13:39:53.697 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'formContentFilter' to: [/*]
+2019-03-15 13:39:53.697 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [248] -| Mapping filter: 'requestContextFilter' to: [/*]
+2019-03-15 13:39:53.698 |-INFO  [main] org.springframework.boot.web.servlet.FilterRegistrationBean [261] -| Mapping filter: 'webStatFilter' to urls: [/*]
+2019-03-15 13:39:53.811 |-INFO  [main] com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure [56] -| Init DruidDataSource
+2019-03-15 13:39:54.436 |-INFO  [main] com.alibaba.druid.pool.DruidDataSource [930] -| {dataSource-1} inited
+2019-03-15 13:39:55.152 |-INFO  [main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor [171] -| Initializing ExecutorService 'applicationTaskExecutor'
+2019-03-15 13:39:55.793 |-INFO  [main] org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler [171] -| Initializing ExecutorService 'taskScheduler'
+2019-03-15 13:39:55.943 |-INFO  [main] net.devh.boot.grpc.server.serverfactory.AbstractGrpcServerFactory [114] -| Registered gRPC service: JdSystem.ClientAuthService, bean: clientServiceImpl, class: com.jian.grpc.ClientServiceImpl
+2019-03-15 13:39:55.950 |-INFO  [main] net.devh.boot.grpc.server.serverfactory.AbstractGrpcServerFactory [114] -| Registered gRPC service: JdSystem.PersonInfoAuthService, bean: personInfoServiceImpl, class: com.jian.grpc.PersonInfoServiceImpl
+2019-03-15 13:39:56.596 |-INFO  [main] net.devh.boot.grpc.server.serverfactory.GrpcServerLifecycle [91] -| gRPC Server started, listening on address: *, port: 50051
+2019-03-15 13:39:56.615 |-INFO  [main] org.apache.coyote.http11.Http11NioProtocol [173] -| Starting ProtocolHandler ["http-nio-8080"]
+2019-03-15 13:39:56.617 |-INFO  [main] org.apache.tomcat.util.net.NioSelectorPool [173] -| Using a shared selector for servlet write/read
+2019-03-15 13:39:56.646 |-INFO  [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer [204] -| Tomcat started on port(s): 8080 (http) with context path ''
+2019-03-15 13:39:56.652 |-INFO  [main] com.jian.Application [59] -| Started Application in 6.613 seconds (JVM running for 15.479)
+2019-03-15 13:40:44.127 |-INFO  [http-nio-8080-exec-2] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [173] -| Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-03-15 13:40:44.128 |-INFO  [http-nio-8080-exec-2] org.springframework.web.servlet.DispatcherServlet [521] -| Initializing Servlet 'dispatcherServlet'
+2019-03-15 13:40:44.141 |-INFO  [http-nio-8080-exec-2] org.springframework.web.servlet.DispatcherServlet [543] -| Completed initialization in 13 ms
+2019-03-15 13:45:54.803 |-INFO  [grpc-default-executor-0] com.jian.grpc.ClientServiceImpl [82] -| 120452667：设备登录成功！更新
+2019-03-15 13:45:57.941 |-INFO  [grpc-default-executor-0] com.jian.grpc.PersonInfoServiceImpl [59] -| 获取人员cardid:4305232000022700625:曾艳2
+2019-03-15 13:46:16.454 |-INFO  [grpc-default-executor-0] com.jian.grpc.PersonInfoServiceImpl [59] -| 获取人员cardid:4305232000022700625:曾艳2
+2019-03-15 13:46:16.459 |-INFO  [grpc-default-executor-0] com.jian.grpc.PersonInfoServiceImpl [59] -| 获取人员cardid:4305232000022700625:曾艳2
+2019-03-15 13:46:51.797 |-INFO  [grpc-default-worker-ELG-3-1] io.grpc.netty.NettyServerTransport.connections [197] -| Transport failed
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[?:1.8.0_181]
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[?:1.8.0_181]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[?:1.8.0_181]
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[?:1.8.0_181]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380) ~[?:1.8.0_181]
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288) ~[netty-buffer-4.1.29.Final.jar:4.1.29.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1108) ~[netty-buffer-4.1.29.Final.jar:4.1.29.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:347) ~[netty-transport-4.1.29.Final.jar:4.1.29.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) [netty-transport-4.1.29.Final.jar:4.1.29.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:628) [netty-transport-4.1.29.Final.jar:4.1.29.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:563) [netty-transport-4.1.29.Final.jar:4.1.29.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480) [netty-transport-4.1.29.Final.jar:4.1.29.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442) [netty-transport-4.1.29.Final.jar:4.1.29.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884) [netty-common-4.1.29.Final.jar:4.1.29.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.29.Final.jar:4.1.29.Final]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_181]
+2019-03-15 13:47:14.988 |-INFO  [grpc-default-executor-0] com.jian.grpc.ClientServiceImpl [82] -| 120452667：设备登录成功！更新
+2019-03-15 13:47:18.097 |-INFO  [grpc-default-executor-0] com.jian.grpc.PersonInfoServiceImpl [59] -| 获取人员cardid:4305232000022700625:曾艳2
+2019-03-15 13:47:18.103 |-INFO  [grpc-default-executor-0] com.jian.grpc.PersonInfoServiceImpl [59] -| 获取人员cardid:4305232000022700625:曾艳2
+2019-03-15 13:48:39.126 |-INFO  [grpc-default-executor-0] com.jian.grpc.PersonInfoServiceImpl [59] -| 获取人员cardid:4305232000022700625:曾艳2
+2019-03-15 13:48:39.131 |-INFO  [grpc-default-executor-0] com.jian.grpc.PersonInfoServiceImpl [59] -| 获取人员cardid:4305232000022700625:曾艳2
+2019-03-15 13:49:04.354 |-INFO  [grpc-default-worker-ELG-3-2] io.grpc.netty.NettyServerTransport.connections [197] -| Transport failed
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[?:1.8.0_181]
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[?:1.8.0_181]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[?:1.8.0_181]
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[?:1.8.0_181]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380) ~[?:1.8.0_181]
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288) ~[netty-buffer-4.1.29.Final.jar:4.1.29.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1108) ~[netty-buffer-4.1.29.Final.jar:4.1.29.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:347) ~[netty-transport-4.1.29.Final.jar:4.1.29.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) [netty-transport-4.1.29.Final.jar:4.1.29.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:628) [netty-transport-4.1.29.Final.jar:4.1.29.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:563) [netty-transport-4.1.29.Final.jar:4.1.29.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480) [netty-transport-4.1.29.Final.jar:4.1.29.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442) [netty-transport-4.1.29.Final.jar:4.1.29.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884) [netty-common-4.1.29.Final.jar:4.1.29.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.29.Final.jar:4.1.29.Final]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_181]
+2019-03-15 13:53:01.792 |-INFO  [grpc-default-executor-1] com.jian.grpc.ClientServiceImpl [82] -| 120452667：设备登录成功！更新
+2019-03-15 13:53:04.868 |-INFO  [grpc-default-executor-1] com.jian.grpc.PersonInfoServiceImpl [59] -| 获取人员cardid:4305232000022700625:曾艳2
+2019-03-15 13:53:04.872 |-INFO  [grpc-default-executor-1] com.jian.grpc.PersonInfoServiceImpl [59] -| 获取人员cardid:4305232000022700625:打爆玉皇大帝花果山水帘洞齐天大圣孙悟空
+2019-03-15 13:53:50.012 |-INFO  [grpc-default-worker-ELG-3-3] io.grpc.netty.NettyServerTransport.connections [197] -| Transport failed
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method) ~[?:1.8.0_181]
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[?:1.8.0_181]
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223) ~[?:1.8.0_181]
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192) ~[?:1.8.0_181]
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380) ~[?:1.8.0_181]
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:288) ~[netty-buffer-4.1.29.Final.jar:4.1.29.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1108) ~[netty-buffer-4.1.29.Final.jar:4.1.29.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:347) ~[netty-transport-4.1.29.Final.jar:4.1.29.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) [netty-transport-4.1.29.Final.jar:4.1.29.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:628) [netty-transport-4.1.29.Final.jar:4.1.29.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:563) [netty-transport-4.1.29.Final.jar:4.1.29.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:480) [netty-transport-4.1.29.Final.jar:4.1.29.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:442) [netty-transport-4.1.29.Final.jar:4.1.29.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:884) [netty-common-4.1.29.Final.jar:4.1.29.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) [netty-common-4.1.29.Final.jar:4.1.29.Final]
+	at java.lang.Thread.run(Thread.java:748) [?:1.8.0_181]

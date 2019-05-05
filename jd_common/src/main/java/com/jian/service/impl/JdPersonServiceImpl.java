@@ -8,8 +8,6 @@ import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
-
-import com.alibaba.fastjson.JSON;
 import com.jian.dao.JdPersonsMapper;
 import com.jian.dao.LjClientMapper;
 import com.jian.entity.JdPersons;
@@ -49,7 +47,7 @@ public class JdPersonServiceImpl  implements  JdPersonService {
 				if(lp_2.size() > 0 ){
 						face_msg ="已存在";
 						lp.setPhoto("");
-						resultUtil.setData(JSON.toJSON(lp).toString());
+						resultUtil.setData(lp);
 						break;
 				}
 				
@@ -64,7 +62,7 @@ public class JdPersonServiceImpl  implements  JdPersonService {
 				if (bs != null)
 					face_msg = FaceUtil.DetectFace(bs);
 				if(StringUtils.isNotEmpty(face_msg)){
-					resultUtil.setData(JSON.toJSON(lp).toString());
+					resultUtil.setData(lp);
 					break;
 				}
 				lp.setPhoto(FileUtil.addPicture2Midkirs(bs, lp.getIdCard(),"upload/images/"));
@@ -80,14 +78,14 @@ public class JdPersonServiceImpl  implements  JdPersonService {
 					count +=ljPersonMapper.insert(lp);
 			} catch (IllegalArgumentException e) {
 				face_msg = "base64解码错误";
-				resultUtil.setData(JSON.toJSON(lp).toString());
+				resultUtil.setData(lp);
 				break;
 			}catch(Exception e){
 				e.printStackTrace();
 				logger.error(e.getMessage(), e);
 				face_msg = "创建失败";
 				lp.setPhotoFeature(null);
-			   resultUtil.setData(JSON.toJSON(lp).toString());
+			   resultUtil.setData(lp);
 			   break;
 			}
 		}
@@ -122,14 +120,14 @@ public class JdPersonServiceImpl  implements  JdPersonService {
 				if(jdPersons2.size() <= 0){
 					face_msg ="不存在";
 					lp.setPhoto("");
-					resultUtil.setData(JSON.toJSON(lp).toString());
+					resultUtil.setData(lp);
 					break;
 				}
                 	byte[] bs = FileUtil.Base642Byte(lp.getPhoto());
     				if (bs != null)
     					face_msg = FaceUtil.DetectFace(bs);
     				if(StringUtils.isNotEmpty(face_msg)){
-    					resultUtil.setData(JSON.toJSON(lp).toString());
+    					resultUtil.setData(lp);
     					break;
     				}
     				lp.setPhoto(FileUtil.addPicture2Midkirs(bs, lp.getIdCard() ,"upload/images/"));
@@ -164,14 +162,14 @@ public class JdPersonServiceImpl  implements  JdPersonService {
     					
 			} catch (IllegalArgumentException e) {
 				face_msg = "base64解码错误";
-				resultUtil.setData(JSON.toJSON(lp).toString());
+				resultUtil.setData(lp);
 				break;
 			}catch(Exception e){
 				e.printStackTrace();
 				logger.error(e.getMessage(), e);
 				face_msg = "更新失败";
 				lp.setPhotoFeature(null);
-			   resultUtil.setData(JSON.toJSON(lp).toString());
+			   resultUtil.setData(lp);
 			   break;
 			}
 		}
@@ -202,7 +200,7 @@ public class JdPersonServiceImpl  implements  JdPersonService {
 				if(jdPersons2.size() <= 0){
 					msg ="不存在";
 					lp.setPhoto("");
-					resultUtil.setData(JSON.toJSON(lp).toString());
+					resultUtil.setData(lp);
 					break;
 				}
 	    	  lp.setPhoto(null);
