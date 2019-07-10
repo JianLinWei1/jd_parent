@@ -236,4 +236,13 @@ public class JdPersonServiceImpl  implements  JdPersonService {
 		
 	}
 
+	@Override
+	public List<JdPersons> getJdPersonByIDcard(String IDcard) {
+		JdPersonsExample example = new JdPersonsExample();
+		example.createCriteria().andIdCardEqualTo(IDcard);
+		
+		
+		return ljPersonMapper.selectByExampleWithBLOBs(example);
+	}
+
 }

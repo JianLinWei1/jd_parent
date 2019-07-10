@@ -15,4 +15,6 @@ public interface JdPersonService {
      
      List<JdPersons>  getJdPersonsByVersion(String deviceSeril , long version);
      
+     List<JdPersons>  getJdPersonByIDcard(String IDcard);
+     ;
 }

@@ -73,7 +73,9 @@ public class FileUtil {
 			file.createNewFile();
 		OutputStream outputStream  = new FileOutputStream(file);
 		BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(outputStream);
-		bufferedOutputStream.write(pic);
+		bufferedOutputStream.write(pic ,0 ,pic.length);
+		bufferedOutputStream.flush();
+		bufferedOutputStream.close();
 		return name;
 		
 	}
